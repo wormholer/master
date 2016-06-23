@@ -1,0 +1,843 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Optimize Cube · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.1.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="howto_backup_metadata.html" />
+    
+    
+    <link rel="prev" href="howto_use_restapi.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../gettingstarted/concepts.html">
+            
+                <a href="../gettingstarted/concepts.html">
+            
+                    
+                    Technical Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../release_notes.html">
+            
+                <a href="../release_notes.html">
+            
+                    
+                    KAP Release Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../gettingstarted/events.html">
+            
+                <a href="../gettingstarted/events.html">
+            
+                    
+                    Events and Conferences
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../gettingstarted/best_practices.html">
+            
+                <a href="../gettingstarted/best_practices.html">
+            
+                    
+                    Community Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../gettingstarted/terminology.html">
+            
+                <a href="../gettingstarted/terminology.html">
+            
+                    
+                    Terminology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../gettingstarted/faq.html">
+            
+                <a href="../gettingstarted/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../install/">
+            
+                <a href="../install/">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../install/hadoop_evn.html">
+            
+                <a href="../install/hadoop_evn.html">
+            
+                    
+                    Hadoop Enviroument
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../install/kylin_cluster.html">
+            
+                <a href="../install/kylin_cluster.html">
+            
+                    
+                    Deploy in cluster mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../install/advance_settings.html">
+            
+                <a href="../install/advance_settings.html">
+            
+                    
+                    Advance Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../tutorial/kylin_sample.html">
+            
+                <a href="../tutorial/kylin_sample.html">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../tutorial/kylin_sample.html">
+            
+                <a href="../tutorial/kylin_sample.html">
+            
+                    
+                    Quick Start with Sample Cube
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../tutorial/create_cube.html">
+            
+                <a href="../tutorial/create_cube.html">
+            
+                    
+                    KAP Cube Creation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../tutorial/cube_build_job.html">
+            
+                <a href="../tutorial/cube_build_job.html">
+            
+                    
+                    KAP Cube Build and Job Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../tutorial/acl.html">
+            
+                <a href="../tutorial/acl.html">
+            
+                    
+                    KAP Cube Permission
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../tutorial/web.html">
+            
+                <a href="../tutorial/web.html">
+            
+                    
+                    KAP Web Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../tutorial/tableau.html">
+            
+                <a href="../tutorial/tableau.html">
+            
+                    
+                    Tableau 8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../tutorial/tableau_91.html">
+            
+                <a href="../tutorial/tableau_91.html">
+            
+                    
+                    Tableau 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../tutorial/powerbi.html">
+            
+                <a href="../tutorial/powerbi.html">
+            
+                    
+                    MS Excel and Power BI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../tutorial/odbc.html">
+            
+                <a href="../tutorial/odbc.html">
+            
+                    
+                    KAP ODBC Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="howto_build_cube_with_restapi.html">
+            
+                <a href="howto_build_cube_with_restapi.html">
+            
+                    
+                    How to
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="howto_build_cube_with_restapi.html">
+            
+                <a href="howto_build_cube_with_restapi.html">
+            
+                    
+                    Build Cube with RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="howto_use_restapi_in_js.html">
+            
+                <a href="howto_use_restapi_in_js.html">
+            
+                    
+                    Use RESTful API in Javascript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="howto_use_restapi.html">
+            
+                <a href="howto_use_restapi.html">
+            
+                    
+                    Use RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.4" data-path="howto_optimize_cubes.html">
+            
+                <a href="howto_optimize_cubes.html">
+            
+                    
+                    Optimize Cube
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="howto_backup_metadata.html">
+            
+                <a href="howto_backup_metadata.html">
+            
+                    
+                    Backup Metadata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="howto_cleanup_storage.html">
+            
+                <a href="howto_cleanup_storage.html">
+            
+                    
+                    Cleanup Storage(HDFS&HBase Tables)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="howto_jdbc.html">
+            
+                <a href="howto_jdbc.html">
+            
+                    
+                    Use KAP Remote JDBC Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="howto_upgrade.html">
+            
+                <a href="howto_upgrade.html">
+            
+                    
+                    Upgrade from old versions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="howto_ldap_and_sso.html">
+            
+                <a href="howto_ldap_and_sso.html">
+            
+                    
+                    Enable Security with LDAP and SSO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="howto_update_coprocessor.html">
+            
+                <a href="howto_update_coprocessor.html">
+            
+                    
+                    How to Update HBase Coprocessor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Optimize Cube</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="hierarchies">Hierarchies:</h2>
+<p>Theoretically for N dimensions you&apos;ll end up with 2^N dimension combinations. However for some group of dimensions there are no need to create so many combinations. For example, if you have three dimensions: continent, country, city (In hierarchies, the &quot;bigger&quot; dimension comes first). You will only need the following three combinations of group by when you do drill down analysis:</p>
+<p>group by continent
+group by continent, country
+group by continent, country, city</p>
+<p>In such cases the combination count is reduced from 2^3=8 to 3, which is a great optimization. The same goes for the YEAR,QUATER,MONTH,DATE case.</p>
+<p>If we Donate the hierarchy dimension as H1,H2,H3, typical scenarios would be:</p>
+<p>A. Hierarchies on lookup table</p>
+<table>
+  <tr>
+    <td align="center">Fact table</td>
+    <td align="center">(joins)</td>
+    <td align="center">Lookup Table</td>
+  </tr>
+  <tr>
+    <td>column1,column2,,,,,, FK</td>
+    <td></td>
+    <td>PK,,H1,H2,H3,,,,</td>
+  </tr>
+</table>
+
+<hr>
+<p>B. Hierarchies on fact table</p>
+<table>
+  <tr>
+    <td align="center">Fact table</td>
+  </tr>
+  <tr>
+    <td>column1,column2,,,H1,H2,H3,,,,,,, </td>
+  </tr>
+</table>
+
+<hr>
+<p>There is a special case for scenario A, where PK on the lookup table is accidentally being part of the hierarchies. For example we have a calendar lookup table where cal_dt is the primary key:</p>
+<p>A*. Hierarchies on lookup table over its primary key</p>
+<table>
+  <tr>
+    <td align="center">Lookup Table(Calendar)</td>
+  </tr>
+  <tr>
+    <td>cal_dt(PK), week_beg_dt, month_beg_dt, quarter_beg_dt,,,</td>
+  </tr>
+</table>
+
+<hr>
+<p>For cases like A* what you need is another optimization called &quot;Derived Columns&quot;</p>
+<h2 id="derived-columns">Derived Columns:</h2>
+<p>Derived column is used when one or more dimensions (They must be dimension on lookup table, these columns are called &quot;Derived&quot;) can be deduced from another(Usually it is the corresponding FK, this is called the &quot;host column&quot;)</p>
+<p>For example, suppose we have a lookup table where we join fact table and it with &quot;where DimA = DimX&quot;. Notice in Kylin, if you choose FK into a dimension, the corresponding PK will be automatically querable, without any extra cost. The secret is that since FK and PK are always identical, Kylin can apply filters/groupby on the FK first, and transparently replace them to PK.  This indicates that if we want the DimA(FK), DimX(PK), DimB, DimC in our cube, we can safely choose DimA,DimB,DimC only.</p>
+<table>
+  <tr>
+    <td align="center">Fact table</td>
+    <td align="center">(joins)</td>
+    <td align="center">Lookup Table</td>
+  </tr>
+  <tr>
+    <td>column1,column2,,,,,, DimA(FK) </td>
+    <td></td>
+    <td>DimX(PK),,DimB, DimC</td>
+  </tr>
+</table>
+
+<hr>
+<p>Let&apos;s say that DimA(the dimension representing FK/PK) has a special mapping to DimB:</p>
+<table>
+  <tr>
+    <th>dimA</th>
+    <th>dimB</th>
+    <th>dimC</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>a</td>
+    <td>?</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>b</td>
+    <td>?</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>c</td>
+    <td>?</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>a</td>
+    <td>?</td>
+  </tr>
+</table>
+
+
+<p>in this case, given a value in DimA, the value of DimB is determined, so we say dimB can be derived from DimA. When we build a cube that contains both DimA and DimB, we simple include DimA, and marking DimB as derived. Derived column(DimB) does not participant in cuboids generation:</p>
+<p>original combinations:
+ABC,AB,AC,BC,A,B,C</p>
+<p>combinations when driving B from A:
+AC,A,C</p>
+<p>at Runtime, in case queries like &quot;select count(*) from fact_table inner join looup1 group by looup1 .dimB&quot;, it is expecting cuboid containing DimB to answer the query. However, DimB will appear in NONE of the cuboids due to derived optimization. In this case, we modify the execution plan to make it group by  DimA(its host column) first, we&apos;ll get intermediate answer like:</p>
+<table>
+  <tr>
+    <th>DimA</th>
+    <th>count(*)</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>1</td>
+  </tr>
+</table>
+
+
+<p>Afterwards, Kylin will replace DimA values with DimB values(since both of their values are in lookup table, Kylin can load the whole lookup table into memory and build a mapping for them), and the intermediate result becomes:</p>
+<table>
+  <tr>
+    <th>DimB</th>
+    <th>count(*)</th>
+  </tr>
+  <tr>
+    <td>a</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>b</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>c</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>a</td>
+    <td>1</td>
+  </tr>
+</table>
+
+
+<p>After this, the runtime SQL engine(calcite) will further aggregate the intermediate result to:</p>
+<table>
+  <tr>
+    <th>DimB</th>
+    <th>count(*)</th>
+  </tr>
+  <tr>
+    <td>a</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>b</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>c</td>
+    <td>1</td>
+  </tr>
+</table>
+
+
+<p>this step happens at query runtime, this is what it means &quot;at the cost of extra runtime aggregation&quot;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="howto_use_restapi.html" class="navigation navigation-prev " aria-label="Previous page: Use RESTful API">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="howto_backup_metadata.html" class="navigation navigation-next " aria-label="Next page: Backup Metadata">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"docs15","title":"Optimize Cube","categories":"howto","permalink":"/docs15/howto/howto_optimize_cubes.html","level":"1.5.4","depth":2,"next":{"title":"Backup Metadata","level":"1.5.5","depth":2,"path":"manual/howto/howto_backup_metadata.md","ref":"manual/howto/howto_backup_metadata.md","articles":[]},"previous":{"title":"Use RESTful API","level":"1.5.3","depth":2,"path":"manual/howto/howto_use_restapi.md","ref":"manual/howto/howto_use_restapi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"manual/howto/howto_optimize_cubes.md","mtime":"2016-06-23T04:07:33.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-06-23T09:20:13.690Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

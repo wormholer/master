@@ -1,0 +1,745 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Enable Security with LDAP and SSO · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.1.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="howto_update_coprocessor.html" />
+    
+    
+    <link rel="prev" href="howto_upgrade.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../gettingstarted/concepts.html">
+            
+                <a href="../gettingstarted/concepts.html">
+            
+                    
+                    Technical Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../release_notes.html">
+            
+                <a href="../release_notes.html">
+            
+                    
+                    KAP Release Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../gettingstarted/events.html">
+            
+                <a href="../gettingstarted/events.html">
+            
+                    
+                    Events and Conferences
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../gettingstarted/best_practices.html">
+            
+                <a href="../gettingstarted/best_practices.html">
+            
+                    
+                    Community Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../gettingstarted/terminology.html">
+            
+                <a href="../gettingstarted/terminology.html">
+            
+                    
+                    Terminology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../gettingstarted/faq.html">
+            
+                <a href="../gettingstarted/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../install/">
+            
+                <a href="../install/">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../install/hadoop_evn.html">
+            
+                <a href="../install/hadoop_evn.html">
+            
+                    
+                    Hadoop Enviroument
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../install/kylin_cluster.html">
+            
+                <a href="../install/kylin_cluster.html">
+            
+                    
+                    Deploy in cluster mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../install/advance_settings.html">
+            
+                <a href="../install/advance_settings.html">
+            
+                    
+                    Advance Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../tutorial/kylin_sample.html">
+            
+                <a href="../tutorial/kylin_sample.html">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../tutorial/kylin_sample.html">
+            
+                <a href="../tutorial/kylin_sample.html">
+            
+                    
+                    Quick Start with Sample Cube
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../tutorial/create_cube.html">
+            
+                <a href="../tutorial/create_cube.html">
+            
+                    
+                    KAP Cube Creation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../tutorial/cube_build_job.html">
+            
+                <a href="../tutorial/cube_build_job.html">
+            
+                    
+                    KAP Cube Build and Job Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../tutorial/acl.html">
+            
+                <a href="../tutorial/acl.html">
+            
+                    
+                    KAP Cube Permission
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../tutorial/web.html">
+            
+                <a href="../tutorial/web.html">
+            
+                    
+                    KAP Web Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../tutorial/tableau.html">
+            
+                <a href="../tutorial/tableau.html">
+            
+                    
+                    Tableau 8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../tutorial/tableau_91.html">
+            
+                <a href="../tutorial/tableau_91.html">
+            
+                    
+                    Tableau 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../tutorial/powerbi.html">
+            
+                <a href="../tutorial/powerbi.html">
+            
+                    
+                    MS Excel and Power BI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../tutorial/odbc.html">
+            
+                <a href="../tutorial/odbc.html">
+            
+                    
+                    KAP ODBC Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="howto_build_cube_with_restapi.html">
+            
+                <a href="howto_build_cube_with_restapi.html">
+            
+                    
+                    How to
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="howto_build_cube_with_restapi.html">
+            
+                <a href="howto_build_cube_with_restapi.html">
+            
+                    
+                    Build Cube with RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="howto_use_restapi_in_js.html">
+            
+                <a href="howto_use_restapi_in_js.html">
+            
+                    
+                    Use RESTful API in Javascript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="howto_use_restapi.html">
+            
+                <a href="howto_use_restapi.html">
+            
+                    
+                    Use RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="howto_optimize_cubes.html">
+            
+                <a href="howto_optimize_cubes.html">
+            
+                    
+                    Optimize Cube
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="howto_backup_metadata.html">
+            
+                <a href="howto_backup_metadata.html">
+            
+                    
+                    Backup Metadata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="howto_cleanup_storage.html">
+            
+                <a href="howto_cleanup_storage.html">
+            
+                    
+                    Cleanup Storage(HDFS&HBase Tables)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="howto_jdbc.html">
+            
+                <a href="howto_jdbc.html">
+            
+                    
+                    Use KAP Remote JDBC Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="howto_upgrade.html">
+            
+                <a href="howto_upgrade.html">
+            
+                    
+                    Upgrade from old versions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.9" data-path="howto_ldap_and_sso.html">
+            
+                <a href="howto_ldap_and_sso.html">
+            
+                    
+                    Enable Security with LDAP and SSO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="howto_update_coprocessor.html">
+            
+                <a href="howto_update_coprocessor.html">
+            
+                    
+                    How to Update HBase Coprocessor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Enable Security with LDAP and SSO</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="enable-ldap-authentication">Enable LDAP authentication</h2>
+<p>Kylin supports LDAP authentication for enterprise or production deployment; This is implemented with Spring Security framework; Before enable LDAP, please contact your LDAP administrator to get necessary information, like LDAP server URL, username/password, search patterns;</p>
+<h4 id="configure-ldap-server-info">Configure LDAP server info</h4>
+<p>Firstly, provide LDAP URL, and username/password if the LDAP server is secured; The password in kylin.properties need be salted; You can run &quot;org.apache.kylin.rest.security.PasswordPlaceholderConfigurer AES your_password&quot; to get a hash.</p>
+<pre><code>ldap.server=ldap://&lt;your_ldap_host&gt;:&lt;port&gt;
+ldap.username=&lt;your_user_name&gt;
+ldap.password=&lt;your_password_hash&gt;
+</code></pre><p>Secondly, provide the user search patterns, this is by LDAP design, here is just a sample:</p>
+<pre><code>ldap.user.searchBase=OU=UserAccounts,DC=mycompany,DC=com
+ldap.user.searchPattern=(&amp;(AccountName={0})(memberOf=CN=MYCOMPANY-USERS,DC=mycompany,DC=com))
+ldap.user.groupSearchBase=OU=Group,DC=mycompany,DC=com
+</code></pre><p>If you have service accounts (e.g, for system integration) which also need be authenticated, configure them in ldap.service.*; Otherwise, leave them be empty;</p>
+<h3 id="configure-the-administrator-group-and-default-role">Configure the administrator group and default role</h3>
+<p>To map an LDAP group to the admin group in Kylin, need set the &quot;acl.adminRole&quot; to &quot;ROLE_&quot; + GROUP_NAME. For example, in LDAP the group &quot;KYLIN-ADMIN-GROUP&quot; is the list of administrators, here need set it as:</p>
+<pre><code>acl.adminRole=ROLE_KYLIN-ADMIN-GROUP
+acl.defaultRole=ROLE_ANALYST,ROLE_MODELER
+</code></pre><p>The &quot;acl.defaultRole&quot; is a list of the default roles that grant to everyone, keep it as-is.</p>
+<h4 id="enable-ldap">Enable LDAP</h4>
+<p>Set &quot;kylin.security.profile=ldap&quot; in conf/kylin.properties, then restart Kylin server.</p>
+<h2 id="enable-sso-authentication">Enable SSO authentication</h2>
+<p>From v1.5, Kylin provides SSO with SAML. The implementation is based on Spring Security SAML Extension. You can read <a href="http://docs.spring.io/autorepo/docs/spring-security-saml/1.0.x-SNAPSHOT/reference/htmlsingle/" target="_blank">this reference</a> to get an overall understand.</p>
+<p>Before trying this, you should have successfully enabled LDAP and managed users with it, as SSO server may only do authentication, Kylin need search LDAP to get the user&apos;s detail information.</p>
+<h3 id="generate-idp-metadata-xml">Generate IDP metadata xml</h3>
+<p>Contact your IDP (ID provider), asking to generate the SSO metadata file; Usually you need provide three piece of info:</p>
+<ol>
+<li>Partner entity ID, which is an unique ID of your app, e.g,: <a href="https://host-name/kylin/saml/metadata" target="_blank">https://host-name/kylin/saml/metadata</a> </li>
+<li>App callback endpoint, to which the SAML assertion be posted, it need be: <a href="https://host-name/kylin/saml/SSO" target="_blank">https://host-name/kylin/saml/SSO</a></li>
+<li>Public certificate of Kylin server, the SSO server will encrypt the message with it.</li>
+</ol>
+<h3 id="generate-jks-keystore-for-kylin">Generate JKS keystore for Kylin</h3>
+<p>As Kylin need send encrypted message (signed with Kylin&apos;s private key) to SSO server, a keystore (JKS) need be provided. There are a couple ways to generate the keystore, below is a sample.</p>
+<p>Assume kylin.crt is the public certificate file, kylin.key is the private certificate file; firstly create a PKCS#12 file with openssl, then convert it to JKS with keytool: </p>
+<pre><code>$ openssl pkcs12 -export -in kylin.crt -inkey kylin.key -out kylin.p12
+Enter Export Password: &lt;export_pwd&gt;
+Verifying - Enter Export Password: &lt;export_pwd&gt;
+
+
+$ keytool -importkeystore -srckeystore kylin.p12 -srcstoretype PKCS12 -srcstorepass &lt;export_pwd&gt; -alias 1 -destkeystore samlKeystore.jks -destalias kylin -destkeypass changeit
+
+Enter destination keystore password:  changeit
+Re-enter new password: changeit
+</code></pre><p>It will put the keys to &quot;samlKeystore.jks&quot; with alias &quot;kylin&quot;;</p>
+<h3 id="enable-higher-ciphers">Enable Higher Ciphers</h3>
+<p>Make sure your environment is ready to handle higher level crypto keys, you may need to download Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files, copy local_policy.jar and US_export_policy.jar to $JAVA_HOME/jre/lib/security .</p>
+<h3 id="deploy-idp-xml-file-and-keystore-to-kylin">Deploy IDP xml file and keystore to Kylin</h3>
+<p>The IDP metadata and keystore file need be deployed in Kylin web app&apos;s classpath in $KYLIN_HOME/tomcat/webapps/kylin/WEB-INF/classes </p>
+<ol>
+<li>Name the IDP file to sso_metadata.xml and then copy to Kylin&apos;s classpath;</li>
+<li>Name the keystore as &quot;samlKeystore.jks&quot; and then copy to Kylin&apos;s classpath;</li>
+<li>If you use another alias or password, remember to update that kylinSecurity.xml accordingly:</li>
+</ol>
+<pre><code>&lt;!-- Central storage of cryptographic keys --&gt;
+&lt;bean id=&quot;keyManager&quot; class=&quot;org.springframework.security.saml.key.JKSKeyManager&quot;&gt;
+    &lt;constructor-arg value=&quot;classpath:samlKeystore.jks&quot;/&gt;
+    &lt;constructor-arg type=&quot;java.lang.String&quot; value=&quot;changeit&quot;/&gt;
+    &lt;constructor-arg&gt;
+        &lt;map&gt;
+            &lt;entry key=&quot;kylin&quot; value=&quot;changeit&quot;/&gt;
+        &lt;/map&gt;
+    &lt;/constructor-arg&gt;
+    &lt;constructor-arg type=&quot;java.lang.String&quot; value=&quot;kylin&quot;/&gt;
+&lt;/bean&gt;
+</code></pre><h3 id="other-configurations">Other configurations</h3>
+<p>In conf/kylin.properties, add the following properties with your server information:</p>
+<pre><code>saml.metadata.entityBaseURL=https://host-name/kylin
+saml.context.scheme=https
+saml.context.serverName=host-name
+saml.context.serverPort=443
+saml.context.contextPath=/kylin
+</code></pre><p>Please note, Kylin assume in the SAML message there is a &quot;email&quot; attribute representing the login user, and the name before @ will be used to search LDAP. </p>
+<h3 id="enable-sso">Enable SSO</h3>
+<p>Set &quot;kylin.security.profile=saml&quot; in conf/kylin.properties, then restart Kylin server; After that, type a URL like &quot;/kylin&quot; or &quot;/kylin/cubes&quot; will redirect to SSO for login, and jump back after be authorized. While login with LDAP is still available, you can type &quot;/kylin/login&quot; to use original way. The Rest API (/kylin/api/*) still use LDAP + basic authentication, no impact.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="howto_upgrade.html" class="navigation navigation-prev " aria-label="Previous page: Upgrade from old versions">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="howto_update_coprocessor.html" class="navigation navigation-next " aria-label="Next page: How to Update HBase Coprocessor">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"docs15","title":"Enable Security with LDAP and SSO","categories":"howto","permalink":"/docs15/howto/howto_ldap_and_sso.html","level":"1.5.9","depth":2,"next":{"title":"How to Update HBase Coprocessor","level":"1.5.10","depth":2,"path":"manual/howto/howto_update_coprocessor.md","ref":"manual/howto/howto_update_coprocessor.md","articles":[]},"previous":{"title":"Upgrade from old versions","level":"1.5.8","depth":2,"path":"manual/howto/howto_upgrade.md","ref":"manual/howto/howto_upgrade.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"manual/howto/howto_ldap_and_sso.md","mtime":"2016-06-23T04:07:33.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-06-23T09:20:13.690Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

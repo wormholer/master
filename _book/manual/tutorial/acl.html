@@ -1,0 +1,695 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>KAP Cube Permission · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.1.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="web.html" />
+    
+    
+    <link rel="prev" href="cube_build_job.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../gettingstarted/concepts.html">
+            
+                <a href="../gettingstarted/concepts.html">
+            
+                    
+                    Technical Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../release_notes.html">
+            
+                <a href="../release_notes.html">
+            
+                    
+                    KAP Release Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../gettingstarted/events.html">
+            
+                <a href="../gettingstarted/events.html">
+            
+                    
+                    Events and Conferences
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../gettingstarted/best_practices.html">
+            
+                <a href="../gettingstarted/best_practices.html">
+            
+                    
+                    Community Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../gettingstarted/terminology.html">
+            
+                <a href="../gettingstarted/terminology.html">
+            
+                    
+                    Terminology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../gettingstarted/faq.html">
+            
+                <a href="../gettingstarted/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../install/">
+            
+                <a href="../install/">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../install/hadoop_evn.html">
+            
+                <a href="../install/hadoop_evn.html">
+            
+                    
+                    Hadoop Enviroument
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../install/kylin_cluster.html">
+            
+                <a href="../install/kylin_cluster.html">
+            
+                    
+                    Deploy in cluster mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../install/advance_settings.html">
+            
+                <a href="../install/advance_settings.html">
+            
+                    
+                    Advance Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="kylin_sample.html">
+            
+                <a href="kylin_sample.html">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="kylin_sample.html">
+            
+                <a href="kylin_sample.html">
+            
+                    
+                    Quick Start with Sample Cube
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="create_cube.html">
+            
+                <a href="create_cube.html">
+            
+                    
+                    KAP Cube Creation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="cube_build_job.html">
+            
+                <a href="cube_build_job.html">
+            
+                    
+                    KAP Cube Build and Job Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="acl.html">
+            
+                <a href="acl.html">
+            
+                    
+                    KAP Cube Permission
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="web.html">
+            
+                <a href="web.html">
+            
+                    
+                    KAP Web Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="tableau.html">
+            
+                <a href="tableau.html">
+            
+                    
+                    Tableau 8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="tableau_91.html">
+            
+                <a href="tableau_91.html">
+            
+                    
+                    Tableau 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="powerbi.html">
+            
+                <a href="powerbi.html">
+            
+                    
+                    MS Excel and Power BI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="odbc.html">
+            
+                <a href="odbc.html">
+            
+                    
+                    KAP ODBC Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../howto/howto_build_cube_with_restapi.html">
+            
+                <a href="../howto/howto_build_cube_with_restapi.html">
+            
+                    
+                    How to
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../howto/howto_build_cube_with_restapi.html">
+            
+                <a href="../howto/howto_build_cube_with_restapi.html">
+            
+                    
+                    Build Cube with RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../howto/howto_use_restapi_in_js.html">
+            
+                <a href="../howto/howto_use_restapi_in_js.html">
+            
+                    
+                    Use RESTful API in Javascript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../howto/howto_use_restapi.html">
+            
+                <a href="../howto/howto_use_restapi.html">
+            
+                    
+                    Use RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../howto/howto_optimize_cubes.html">
+            
+                <a href="../howto/howto_optimize_cubes.html">
+            
+                    
+                    Optimize Cube
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../howto/howto_backup_metadata.html">
+            
+                <a href="../howto/howto_backup_metadata.html">
+            
+                    
+                    Backup Metadata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../howto/howto_cleanup_storage.html">
+            
+                <a href="../howto/howto_cleanup_storage.html">
+            
+                    
+                    Cleanup Storage(HDFS&HBase Tables)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../howto/howto_jdbc.html">
+            
+                <a href="../howto/howto_jdbc.html">
+            
+                    
+                    Use KAP Remote JDBC Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../howto/howto_upgrade.html">
+            
+                <a href="../howto/howto_upgrade.html">
+            
+                    
+                    Upgrade from old versions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../howto/howto_ldap_and_sso.html">
+            
+                <a href="../howto/howto_ldap_and_sso.html">
+            
+                    
+                    Enable Security with LDAP and SSO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../howto/howto_update_coprocessor.html">
+            
+                <a href="../howto/howto_update_coprocessor.html">
+            
+                    
+                    How to Update HBase Coprocessor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >KAP Cube Permission</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>In <code>Cubes</code> page, double click the cube row to see the detail information. Here we focus on the <code>Access</code> tab.
+Click the <code>+Grant</code> button to grant permission. </p>
+<p><img src="../../images/Kylin-Cube-Permission-Grant-Tutorial/14 +grant.png" alt=""></p>
+<p>There are four different kinds of permissions for a cube. Move your mouse over the <code>?</code> icon to see detail information. </p>
+<p><img src="../../images/Kylin-Cube-Permission-Grant-Tutorial/15 grantInfo.png" alt=""></p>
+<p>There are also two types of user that a permission can be granted: <code>User</code> and <code>Role</code>. <code>Role</code> means a group of users who have the same role.</p>
+<h3 id="1-grant-user-permission">1. Grant User Permission</h3>
+<ul>
+<li><p>Select <code>User</code> type, enter the username of the user you want to grant and select the related permission. </p>
+<p>   <img src="../../images/Kylin-Cube-Permission-Grant-Tutorial/16 grant-user.png" alt=""></p>
+</li>
+<li><p>Then click the <code>Grant</code> button to send a request. After the success of this operation, you will see a new table entry show in the table. You can select various permission of access to change the permission of a user. To delete a user with permission, just click the <code>Revoke</code> button.</p>
+<p>   <img src="../../images/Kylin-Cube-Permission-Grant-Tutorial/16 user-update.png" alt=""></p>
+</li>
+</ul>
+<h3 id="2-grant-role-permission">2. Grant Role Permission</h3>
+<ul>
+<li><p>Select <code>Role</code> type, choose a group of users that you want to grant by click the drop down button and select a permission.</p>
+</li>
+<li><p>Then click the <code>Grant</code> button to send a request. After the success of this operation, you will see a new table entry show in the table. You can select various permission of access to change the permission of a group. To delete a group with permission, just click the <code>Revoke</code> button.</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="cube_build_job.html" class="navigation navigation-prev " aria-label="Previous page: KAP Cube Build and Job Monitoring">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="web.html" class="navigation navigation-next " aria-label="Next page: KAP Web Interface">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"docs15","title":"KAP Cube Permission","categories":"tutorial","permalink":"/docs15/tutorial/acl.html","since":"v0.7.1","level":"1.4.4","depth":2,"next":{"title":"KAP Web Interface","level":"1.4.5","depth":2,"path":"manual/tutorial/web.md","ref":"manual/tutorial/web.md","articles":[]},"previous":{"title":"KAP Cube Build and Job Monitoring","level":"1.4.3","depth":2,"path":"manual/tutorial/cube_build_job.md","ref":"manual/tutorial/cube_build_job.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"manual/tutorial/acl.md","mtime":"2016-06-23T04:07:33.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-06-23T09:20:13.690Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

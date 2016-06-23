@@ -1,0 +1,822 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>KAP Cube Creation · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.1.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="cube_build_job.html" />
+    
+    
+    <link rel="prev" href="kylin_sample.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../gettingstarted/concepts.html">
+            
+                <a href="../gettingstarted/concepts.html">
+            
+                    
+                    Technical Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../release_notes.html">
+            
+                <a href="../release_notes.html">
+            
+                    
+                    KAP Release Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../gettingstarted/events.html">
+            
+                <a href="../gettingstarted/events.html">
+            
+                    
+                    Events and Conferences
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../gettingstarted/best_practices.html">
+            
+                <a href="../gettingstarted/best_practices.html">
+            
+                    
+                    Community Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../gettingstarted/terminology.html">
+            
+                <a href="../gettingstarted/terminology.html">
+            
+                    
+                    Terminology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../gettingstarted/faq.html">
+            
+                <a href="../gettingstarted/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../install/">
+            
+                <a href="../install/">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../install/hadoop_evn.html">
+            
+                <a href="../install/hadoop_evn.html">
+            
+                    
+                    Hadoop Enviroument
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../install/kylin_cluster.html">
+            
+                <a href="../install/kylin_cluster.html">
+            
+                    
+                    Deploy in cluster mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../install/advance_settings.html">
+            
+                <a href="../install/advance_settings.html">
+            
+                    
+                    Advance Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="kylin_sample.html">
+            
+                <a href="kylin_sample.html">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="kylin_sample.html">
+            
+                <a href="kylin_sample.html">
+            
+                    
+                    Quick Start with Sample Cube
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="create_cube.html">
+            
+                <a href="create_cube.html">
+            
+                    
+                    KAP Cube Creation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="cube_build_job.html">
+            
+                <a href="cube_build_job.html">
+            
+                    
+                    KAP Cube Build and Job Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="acl.html">
+            
+                <a href="acl.html">
+            
+                    
+                    KAP Cube Permission
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="web.html">
+            
+                <a href="web.html">
+            
+                    
+                    KAP Web Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="tableau.html">
+            
+                <a href="tableau.html">
+            
+                    
+                    Tableau 8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="tableau_91.html">
+            
+                <a href="tableau_91.html">
+            
+                    
+                    Tableau 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="powerbi.html">
+            
+                <a href="powerbi.html">
+            
+                    
+                    MS Excel and Power BI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="odbc.html">
+            
+                <a href="odbc.html">
+            
+                    
+                    KAP ODBC Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../howto/howto_build_cube_with_restapi.html">
+            
+                <a href="../howto/howto_build_cube_with_restapi.html">
+            
+                    
+                    How to
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../howto/howto_build_cube_with_restapi.html">
+            
+                <a href="../howto/howto_build_cube_with_restapi.html">
+            
+                    
+                    Build Cube with RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../howto/howto_use_restapi_in_js.html">
+            
+                <a href="../howto/howto_use_restapi_in_js.html">
+            
+                    
+                    Use RESTful API in Javascript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../howto/howto_use_restapi.html">
+            
+                <a href="../howto/howto_use_restapi.html">
+            
+                    
+                    Use RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../howto/howto_optimize_cubes.html">
+            
+                <a href="../howto/howto_optimize_cubes.html">
+            
+                    
+                    Optimize Cube
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../howto/howto_backup_metadata.html">
+            
+                <a href="../howto/howto_backup_metadata.html">
+            
+                    
+                    Backup Metadata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../howto/howto_cleanup_storage.html">
+            
+                <a href="../howto/howto_cleanup_storage.html">
+            
+                    
+                    Cleanup Storage(HDFS&HBase Tables)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../howto/howto_jdbc.html">
+            
+                <a href="../howto/howto_jdbc.html">
+            
+                    
+                    Use KAP Remote JDBC Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../howto/howto_upgrade.html">
+            
+                <a href="../howto/howto_upgrade.html">
+            
+                    
+                    Upgrade from old versions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../howto/howto_ldap_and_sso.html">
+            
+                <a href="../howto/howto_ldap_and_sso.html">
+            
+                    
+                    Enable Security with LDAP and SSO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../howto/howto_update_coprocessor.html">
+            
+                <a href="../howto/howto_update_coprocessor.html">
+            
+                    
+                    How to Update HBase Coprocessor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >KAP Cube Creation</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>This tutorial will guide you to create a cube. It need you have at least 1 sample table in Hive. If you don&apos;t have, you can follow this to create some data.</p>
+<h3 id="i-create-a-project">I. Create a Project</h3>
+<ol>
+<li><p>Go to <code>Query</code> page in top menu bar, then click <code>Manage Projects</code>.</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/1 manage-prject.png" alt=""></p>
+</li>
+<li><p>Click the <code>+ Project</code> button to add a new project.</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/2 +project.png" alt=""></p>
+</li>
+<li><p>Enter a project name, e.g, &quot;Tutorial&quot;, with a description (optional), then click <code>submit</code> button to send the request.</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/3 new-project.png" alt=""></p>
+</li>
+<li><p>After success, the project will show in the table.</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/3.1 pj-created.png" alt=""></p>
+</li>
+</ol>
+<h3 id="ii-sync-up-hive-table">II. Sync up Hive Table</h3>
+<ol>
+<li><p>Click <code>Model</code> in top bar and then click <code>Data Source</code> tab in the left part, it lists all the tables loaded into Kylin; click <code>Load Hive Table</code> button.</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/4 +table.png" alt=""></p>
+</li>
+<li><p>Enter the hive table names, separated with commad, and then click <code>Sync</code> to send the request.</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/5 hive-table.png" alt=""></p>
+</li>
+<li><p>[Optional] If you want to browser the hive database to pick tables, click the <code>Load Hive Table From Tree</code> button.</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/4 +table-tree.png" alt=""></p>
+</li>
+<li><p>[Optional] Expand the database node, click to select the table to load, and then click <code>Sync</code>.</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/5 hive-table-tree.png" alt=""></p>
+</li>
+<li><p>A success message will pop up. In the left <code>Tables</code> section, the newly loaded table is added. Click the table name will expand the columns.</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/5 hive-table-info.png" alt=""></p>
+</li>
+<li><p>In the background, Kylin will run a MapReduce job to calculate the approximate cardinality for the newly synced table. After the job be finished, refresh web page and then click the table name, the cardinality will be shown in the table info.</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/5 hive-table-cardinality.png" alt=""></p>
+</li>
+</ol>
+<h3 id="iii-create-data-model">III. Create Data Model</h3>
+<p>Before create a cube, need define a data model. The data model defines the star schema. One data model can be reused in multiple cubes.</p>
+<ol>
+<li><p>Click <code>Model</code> in top bar, and then click <code>Models</code> tab. Click <code>+New</code> button, in the drop-down list select <code>New Model</code>.</p>
+<p> <img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/6 +model.png" alt=""></p>
+</li>
+<li><p>Enter a name for the model, with an optional description.</p>
+<p> <img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/6 model-name.png" alt=""></p>
+</li>
+<li><p>In the <code>Fact Table</code> box, select the fact table of this data model.</p>
+<p> <img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/6 model-fact-table.png" alt=""></p>
+</li>
+<li><p>[Optional] Click <code>Add Lookup Table</code> button to add a lookup table. Select the table name and join type (inner or left).</p>
+<p> <img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/6 model-lookup-table.png" alt=""></p>
+</li>
+<li><p>[Optional] Click <code>New Join Condition</code> button, select the FK column of fact table in the left, and select the PK column of lookup table in the right side. Repeat this if have more than one join columns.</p>
+<p> <img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/6 model-join-condition.png" alt=""></p>
+</li>
+<li><p>Click &quot;OK&quot;, repeat step 4 and 5 to add more lookup tables if any. After finished, click &quot;Next&quot;.</p>
+</li>
+<li><p>The &quot;Dimensions&quot; page allows to select the columns that will be used as dimension in the child cubes. Click the <code>Columns</code> cell of a table, in the drop-down list select the column to the list. </p>
+<p> <img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/6 model-dimensions.png" alt=""></p>
+</li>
+<li><p>Click &quot;Next&quot; go to the &quot;Measures&quot; page, select the columns that will be used in measure/metrics. The measure column can only from fact table. </p>
+<p> <img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/6 model-measures.png" alt=""></p>
+</li>
+<li><p>Click &quot;Next&quot; to the &quot;Settings&quot; page. If the data in fact table increases by day, select the corresponding date column in the <code>Partition Date Column</code>, and select the date format, otherwise leave it as blank.</p>
+</li>
+<li><p>[Optional] Select <code>Cube Size</code>, which is an indicator on the scale of the cube, by default it is <code>MEDIUM</code>.</p>
+</li>
+<li><p>[Optional] If some records want to excluded from the cube, like dirty data, you can input the condition in <code>Filter</code>.</p>
+</li>
+</ol>
+<pre><code>![]( /images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/6 model-partition-column.png)
+</code></pre><ol>
+<li><p>Click <code>Save</code> and then select <code>Yes</code> to save the data model. After created, the data model will be shown in the left <code>Models</code> list.</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/6 model-created.png" alt=""></p>
+</li>
+</ol>
+<h3 id="iv-create-cube">IV. Create Cube</h3>
+<p>After the data model be created, you can start to create cube. </p>
+<p>Click <code>Model</code> in top bar, and then click <code>Models</code> tab. Click <code>+New</code> button, in the drop-down list select <code>New Cube</code>.
+    <img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/7 new-cube.png" alt=""></p>
+<p><strong>Step 1. Cube Info</strong></p>
+<p>Select the data model, enter the cube name; Click <code>Next</code> to enter the next step.</p>
+<p>You can use letters, numbers and &apos;_&apos; to name your cube (blank space in name is not allowed). <code>Notification List</code> is a list of email addresses which be notified on cube job success/failure.
+    <img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/7 cube-info.png" alt=""></p>
+<p><strong>Step 2. Dimensions</strong></p>
+<ol>
+<li><p>Click <code>Add Dimension</code>, it popups two option: &quot;Normal&quot; and &quot;Derived&quot;: &quot;Normal&quot; is to add a normal independent dimension column, &quot;Derived&quot; is to add a derived dimension column. Read more in <a href="../../docs15/howto/howto_optimize_cubes.html">How to optimize cubes</a>.</p>
+</li>
+<li><p>Click &quot;Normal&quot; and then select a dimension column, give it a meaningful name.</p>
+<p> <img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/7 cube-dimension-normal.png" alt=""></p>
+</li>
+<li><p>[Optional] Click &quot;Derived&quot; and then pickup 1 more multiple columns on lookup table, give them a meaningful name.</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/7 cube-dimension-derived.png" alt=""></p>
+</li>
+<li><p>Repeate 2 and 3 to add all dimension columns; you can do this in batch for &quot;Normal&quot; dimension with the button <code>Auto Generator</code>. </p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/7 cube-dimension-batch.png" alt=""></p>
+</li>
+<li><p>Click &quot;Next&quot; after select all dimensions.</p>
+</li>
+</ol>
+<p><strong>Step 3. Measures</strong></p>
+<ol>
+<li><p>Click the <code>+Measure</code> to add a new measure.
+<img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/8 meas-+meas.png" alt=""></p>
+</li>
+<li><p>There are 6 types of measure according to its expression: <code>SUM</code>, <code>MAX</code>, <code>MIN</code>, <code>COUNT</code>, <code>COUNT_DISTINCT</code> and <code>TOP_N</code>. Properly select the return type for <code>COUNT_DISTINCT</code> and <code>TOP_N</code>, as it will impact on the cube size.</p>
+<ul>
+<li><p>SUM</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/8 measure-sum.png" alt=""></p>
+</li>
+<li><p>MIN</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/8 measure-min.png" alt=""></p>
+</li>
+<li><p>MAX</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/8 measure-max.png" alt=""></p>
+</li>
+<li><p>COUNT</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/8 measure-count.png" alt=""></p>
+</li>
+<li><p>DISTINCT_COUNT
+This measure has two implementations: 
+a) approximate implementation with HyperLogLog, select an acceptable error rate, lower error rate will take more storage.
+b) precise implementation with bitmap (see limitation in <a href="https://issues.apache.org/jira/browse/KYLIN-1186" target="_blank">https://issues.apache.org/jira/browse/KYLIN-1186</a>). </p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/8 measure-distinct.png" alt=""></p>
+</li>
+</ul>
+<p>Pleaste note: distinct count is a very heavy data type, it is slower to build and query comparing to other measures.</p>
+<ul>
+<li>TOP_N
+Approximate TopN measure pre-calculates the top records in each dimension combination, it will provide higher performance in query time than no pre-calculation; Need specify two parameters here: the first is the column will be used as metrics for Top records (aggregated with SUM and then sorted in descending order); the second is the literal ID, represents the record like seller_id;</li>
+</ul>
+<p>Properly select the return type, depends on how many top records to inspect: top 10, top 100 or top 1000. </p>
+<p>  <img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/8 measure-topn.png" alt=""></p>
+</li>
+</ol>
+<p><strong>Step 4. Refresh Setting</strong></p>
+<p>This step is designed for incremental cube build. </p>
+<p><code>Auto Merge Time Ranges (days)</code>: merge the small segments into medium and large segment automatically. If you don&apos;t want to auto merge, remove the default two ranges.</p>
+<p><code>Retention Range (days)</code>: only keep the segment whose data is in past given days in cube, the old segment will be automatically dropped from head; 0 means not enable this feature.</p>
+<p><code>Partition Start Date</code>: the start date of this cube.</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/9 refresh-setting1.png" alt=""></p>
+<p><strong>Step 5. Advanced Setting</strong></p>
+<p><code>Aggregation Groups</code>: by default Kylin put all dimensions into one aggregation group; you can create multiple aggregation groups by knowing well about your query patterns. For the concepts of &quot;Mandatory Dimensions&quot;, &quot;Hierarchy Dimensions&quot; and &quot;Joint Dimensions&quot;, read this blog: <a href="../../blog/2016/02/18/new-aggregation-group">New Aggregation Group</a></p>
+<p><code>Rowkeys</code>: the rowkeys are composed by the dimension encoded values. &quot;Dictionary&quot; is the default encoding method; If a dimension is not fit with dictionary (e.g., cardinality &gt; 10 million), select &quot;false&quot; and then enter the fixed length for that dimension, usually that is the max. length of that column; if a value is longer than that size it will be truncated. Please note, without dictionary encoding, the cube size might be much bigger.</p>
+<p>You can drag &amp; drop a dimension column to adjust its position in rowkey; Put the mandantory dimension at the begining, then followed the dimensions that heavily involved in filters (where condition). Put high cardinality dimensions ahead of low cardinality dimensions.</p>
+<p><strong>Step 6. Overview &amp; Save</strong></p>
+<p>You can overview your cube and go back to previous step to modify it. Click the <code>Save</code> button to complete the cube creation.</p>
+<p><img src="../../images/tutorial/1.5/Kylin-Cube-Creation-Tutorial/10 overview.png" alt=""></p>
+<p>Cheers! now the cube is created, you can go ahead to build and play it.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="kylin_sample.html" class="navigation navigation-prev " aria-label="Previous page: Quick Start with Sample Cube">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="cube_build_job.html" class="navigation navigation-next " aria-label="Next page: KAP Cube Build and Job Monitoring">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"docs15","title":"KAP Cube Creation","categories":"tutorial","permalink":"/docs15/tutorial/create_cube.html","level":"1.4.2","depth":2,"next":{"title":"KAP Cube Build and Job Monitoring","level":"1.4.3","depth":2,"path":"manual/tutorial/cube_build_job.md","ref":"manual/tutorial/cube_build_job.md","articles":[]},"previous":{"title":"Quick Start with Sample Cube","level":"1.4.1","depth":2,"path":"manual/tutorial/kylin_sample.md","ref":"manual/tutorial/kylin_sample.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"manual/tutorial/create_cube.md","mtime":"2016-06-23T04:07:33.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-06-23T09:20:13.690Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

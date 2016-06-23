@@ -1,0 +1,1638 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Use RESTful API · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.1.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="howto_optimize_cubes.html" />
+    
+    
+    <link rel="prev" href="howto_use_restapi_in_js.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../gettingstarted/concepts.html">
+            
+                <a href="../gettingstarted/concepts.html">
+            
+                    
+                    Technical Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../release_notes.html">
+            
+                <a href="../release_notes.html">
+            
+                    
+                    KAP Release Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../gettingstarted/events.html">
+            
+                <a href="../gettingstarted/events.html">
+            
+                    
+                    Events and Conferences
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../gettingstarted/best_practices.html">
+            
+                <a href="../gettingstarted/best_practices.html">
+            
+                    
+                    Community Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../gettingstarted/terminology.html">
+            
+                <a href="../gettingstarted/terminology.html">
+            
+                    
+                    Terminology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../gettingstarted/faq.html">
+            
+                <a href="../gettingstarted/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../install/">
+            
+                <a href="../install/">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../install/hadoop_evn.html">
+            
+                <a href="../install/hadoop_evn.html">
+            
+                    
+                    Hadoop Enviroument
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../install/kylin_cluster.html">
+            
+                <a href="../install/kylin_cluster.html">
+            
+                    
+                    Deploy in cluster mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../install/advance_settings.html">
+            
+                <a href="../install/advance_settings.html">
+            
+                    
+                    Advance Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../tutorial/kylin_sample.html">
+            
+                <a href="../tutorial/kylin_sample.html">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../tutorial/kylin_sample.html">
+            
+                <a href="../tutorial/kylin_sample.html">
+            
+                    
+                    Quick Start with Sample Cube
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../tutorial/create_cube.html">
+            
+                <a href="../tutorial/create_cube.html">
+            
+                    
+                    KAP Cube Creation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../tutorial/cube_build_job.html">
+            
+                <a href="../tutorial/cube_build_job.html">
+            
+                    
+                    KAP Cube Build and Job Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../tutorial/acl.html">
+            
+                <a href="../tutorial/acl.html">
+            
+                    
+                    KAP Cube Permission
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../tutorial/web.html">
+            
+                <a href="../tutorial/web.html">
+            
+                    
+                    KAP Web Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../tutorial/tableau.html">
+            
+                <a href="../tutorial/tableau.html">
+            
+                    
+                    Tableau 8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../tutorial/tableau_91.html">
+            
+                <a href="../tutorial/tableau_91.html">
+            
+                    
+                    Tableau 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../tutorial/powerbi.html">
+            
+                <a href="../tutorial/powerbi.html">
+            
+                    
+                    MS Excel and Power BI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../tutorial/odbc.html">
+            
+                <a href="../tutorial/odbc.html">
+            
+                    
+                    KAP ODBC Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="howto_build_cube_with_restapi.html">
+            
+                <a href="howto_build_cube_with_restapi.html">
+            
+                    
+                    How to
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="howto_build_cube_with_restapi.html">
+            
+                <a href="howto_build_cube_with_restapi.html">
+            
+                    
+                    Build Cube with RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="howto_use_restapi_in_js.html">
+            
+                <a href="howto_use_restapi_in_js.html">
+            
+                    
+                    Use RESTful API in Javascript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="howto_use_restapi.html">
+            
+                <a href="howto_use_restapi.html">
+            
+                    
+                    Use RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="howto_optimize_cubes.html">
+            
+                <a href="howto_optimize_cubes.html">
+            
+                    
+                    Optimize Cube
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="howto_backup_metadata.html">
+            
+                <a href="howto_backup_metadata.html">
+            
+                    
+                    Backup Metadata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="howto_cleanup_storage.html">
+            
+                <a href="howto_cleanup_storage.html">
+            
+                    
+                    Cleanup Storage(HDFS&HBase Tables)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="howto_jdbc.html">
+            
+                <a href="howto_jdbc.html">
+            
+                    
+                    Use KAP Remote JDBC Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="howto_upgrade.html">
+            
+                <a href="howto_upgrade.html">
+            
+                    
+                    Upgrade from old versions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="howto_ldap_and_sso.html">
+            
+                <a href="howto_ldap_and_sso.html">
+            
+                    
+                    Enable Security with LDAP and SSO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="howto_update_coprocessor.html">
+            
+                <a href="howto_update_coprocessor.html">
+            
+                    
+                    How to Update HBase Coprocessor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Use RESTful API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>This page lists all the RESTful APIs provided by Kylin; The base of the URL is <code>/kylin/api</code>, so don&apos;t forget to add it before a certain API&apos;s path. For example, to get all cube instances, send HTTP GET request to &quot;/kylin/api/cubes&quot;.</p>
+<ul>
+<li>Query<ul>
+<li><a href="#authentication">Authentication</a></li>
+<li><a href="#query">Query</a></li>
+<li><a href="#list-queryable-tables">List queryable tables</a></li>
+</ul>
+</li>
+<li>CUBE<ul>
+<li><a href="#list-cubes">List cubes</a></li>
+<li><a href="#get-cube">Get cube</a></li>
+<li><a href="#get-cube-descriptor">Get cube descriptor (dimension, measure info, etc)</a></li>
+<li><a href="#get-data-model">Get data model (fact and lookup table info)</a></li>
+<li><a href="#build-cube">Build cube</a></li>
+<li><a href="#disable-cube">Disable cube</a></li>
+<li><a href="#purge-cube">Purge cube</a></li>
+<li><a href="#enable-cube">Enable cube</a></li>
+</ul>
+</li>
+<li>JOB<ul>
+<li><a href="#resume-job">Resume job</a></li>
+<li><a href="#discard-job">Discard job</a></li>
+<li><a href="#get-job-status">Get job status</a></li>
+<li><a href="#get-job-step-output">Get job step output</a></li>
+</ul>
+</li>
+<li>Metadata<ul>
+<li><a href="#get-hive-table">Get Hive Table</a></li>
+<li><a href="#get-hive-table-extend-info">Get Hive Table (Extend Info)</a></li>
+<li><a href="#get-hive-tables">Get Hive Tables</a></li>
+<li><a href="#load-hive-tables">Load Hive Tables</a></li>
+</ul>
+</li>
+<li>Cache<ul>
+<li><a href="#wipe-cache">Wipe cache</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="authentication">Authentication</h2>
+<p><code>POST /user/authentication</code></p>
+<h4 id="request-header">Request Header</h4>
+<p>Authorization data encoded by basic auth is needed in the header, such as:
+Authorization:Basic {data}</p>
+<h4 id="response-body">Response Body</h4>
+<ul>
+<li>userDetails - Defined authorities and status of current user.</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<pre><code class="lang-sh">{  
+   <span class="hljs-string">&quot;userDetails&quot;</span>:{  
+      <span class="hljs-string">&quot;password&quot;</span>:null,
+      <span class="hljs-string">&quot;username&quot;</span>:<span class="hljs-string">&quot;sample&quot;</span>,
+      <span class="hljs-string">&quot;authorities&quot;</span>:[  
+         {  
+            <span class="hljs-string">&quot;authority&quot;</span>:<span class="hljs-string">&quot;ROLE_ANALYST&quot;</span>
+         },
+         {  
+            <span class="hljs-string">&quot;authority&quot;</span>:<span class="hljs-string">&quot;ROLE_MODELER&quot;</span>
+         }
+      ],
+      <span class="hljs-string">&quot;accountNonExpired&quot;</span>:<span class="hljs-literal">true</span>,
+      <span class="hljs-string">&quot;accountNonLocked&quot;</span>:<span class="hljs-literal">true</span>,
+      <span class="hljs-string">&quot;credentialsNonExpired&quot;</span>:<span class="hljs-literal">true</span>,
+      <span class="hljs-string">&quot;enabled&quot;</span>:<span class="hljs-literal">true</span>
+   }
+}
+</code></pre>
+<h4 id="curl-example">Curl Example</h4>
+<pre><code>curl -c /path/to/cookiefile.txt -X POST -H &quot;Authorization: Basic XXXXXXXXX&quot; -H &apos;Content-Type: application/json&apos; http://&lt;host&gt;:&lt;port&gt;/kylin/api/user/authentication
+</code></pre><p>If login successfully, the JSESSIONID will be saved into the cookie file; In the subsequent http requests, attach the cookie, for example:</p>
+<pre><code>curl -b /path/to/cookiefile.txt -X PUT -H &apos;Content-Type: application/json&apos; -d &apos;{&quot;startTime&quot;:&apos;1423526400000&apos;, &quot;endTime&quot;:&apos;1423526400&apos;, &quot;buildType&quot;:&quot;BUILD&quot;}&apos; http://&lt;host&gt;:&lt;port&gt;/kylin/api/cubes/your_cube/rebuild
+</code></pre><hr>
+<h2 id="query">Query</h2>
+<p><code>POST /query</code></p>
+<h4 id="request-body">Request Body</h4>
+<ul>
+<li>sql - <code>required</code> <code>string</code> The text of sql statement.</li>
+<li>offset - <code>optional</code> <code>int</code> Query offset. If offset is set in sql, curIndex will be ignored.</li>
+<li>limit - <code>optional</code> <code>int</code> Query limit. If limit is set in sql, perPage will be ignored.</li>
+<li>acceptPartial - <code>optional</code> <code>bool</code> Whether accept a partial result or not, default be &quot;false&quot;. Set to &quot;false&quot; for production use. </li>
+<li>project - <code>optional</code> <code>string</code> Project to perform query. Default value is &apos;DEFAULT&apos;.</li>
+</ul>
+<h4 id="request-sample">Request Sample</h4>
+<pre><code class="lang-sh">{  
+   <span class="hljs-string">&quot;sql&quot;</span>:<span class="hljs-string">&quot;select * from TEST_KYLIN_FACT&quot;</span>,
+   <span class="hljs-string">&quot;offset&quot;</span>:0,
+   <span class="hljs-string">&quot;limit&quot;</span>:50000,
+   <span class="hljs-string">&quot;acceptPartial&quot;</span>:<span class="hljs-literal">false</span>,
+   <span class="hljs-string">&quot;project&quot;</span>:<span class="hljs-string">&quot;DEFAULT&quot;</span>
+}
+</code></pre>
+<h4 id="response-body">Response Body</h4>
+<ul>
+<li>columnMetas - Column metadata information of result set.</li>
+<li>results - Data set of result.</li>
+<li>cube - Cube used for this query.</li>
+<li>affectedRowCount - Count of affected row by this sql statement.</li>
+<li>isException - Whether this response is an exception.</li>
+<li>ExceptionMessage - Message content of the exception.</li>
+<li>Duration - Time cost of this query</li>
+<li>Partial - Whether the response is a partial result or not. Decided by <code>acceptPartial</code> of request.</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<pre><code class="lang-sh">{  
+   <span class="hljs-string">&quot;columnMetas&quot;</span>:[  
+      {  
+         <span class="hljs-string">&quot;isNullable&quot;</span>:1,
+         <span class="hljs-string">&quot;displaySize&quot;</span>:0,
+         <span class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string">&quot;CAL_DT&quot;</span>,
+         <span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;CAL_DT&quot;</span>,
+         <span class="hljs-string">&quot;schemaName&quot;</span>:null,
+         <span class="hljs-string">&quot;catelogName&quot;</span>:null,
+         <span class="hljs-string">&quot;tableName&quot;</span>:null,
+         <span class="hljs-string">&quot;precision&quot;</span>:0,
+         <span class="hljs-string">&quot;scale&quot;</span>:0,
+         <span class="hljs-string">&quot;columnType&quot;</span>:91,
+         <span class="hljs-string">&quot;columnTypeName&quot;</span>:<span class="hljs-string">&quot;DATE&quot;</span>,
+         <span class="hljs-string">&quot;readOnly&quot;</span>:<span class="hljs-literal">true</span>,
+         <span class="hljs-string">&quot;writable&quot;</span>:<span class="hljs-literal">false</span>,
+         <span class="hljs-string">&quot;caseSensitive&quot;</span>:<span class="hljs-literal">true</span>,
+         <span class="hljs-string">&quot;searchable&quot;</span>:<span class="hljs-literal">false</span>,
+         <span class="hljs-string">&quot;currency&quot;</span>:<span class="hljs-literal">false</span>,
+         <span class="hljs-string">&quot;signed&quot;</span>:<span class="hljs-literal">true</span>,
+         <span class="hljs-string">&quot;autoIncrement&quot;</span>:<span class="hljs-literal">false</span>,
+         <span class="hljs-string">&quot;definitelyWritable&quot;</span>:<span class="hljs-literal">false</span>
+      },
+      {  
+         <span class="hljs-string">&quot;isNullable&quot;</span>:1,
+         <span class="hljs-string">&quot;displaySize&quot;</span>:10,
+         <span class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string">&quot;LEAF_CATEG_ID&quot;</span>,
+         <span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;LEAF_CATEG_ID&quot;</span>,
+         <span class="hljs-string">&quot;schemaName&quot;</span>:null,
+         <span class="hljs-string">&quot;catelogName&quot;</span>:null,
+         <span class="hljs-string">&quot;tableName&quot;</span>:null,
+         <span class="hljs-string">&quot;precision&quot;</span>:10,
+         <span class="hljs-string">&quot;scale&quot;</span>:0,
+         <span class="hljs-string">&quot;columnType&quot;</span>:4,
+         <span class="hljs-string">&quot;columnTypeName&quot;</span>:<span class="hljs-string">&quot;INTEGER&quot;</span>,
+         <span class="hljs-string">&quot;readOnly&quot;</span>:<span class="hljs-literal">true</span>,
+         <span class="hljs-string">&quot;writable&quot;</span>:<span class="hljs-literal">false</span>,
+         <span class="hljs-string">&quot;caseSensitive&quot;</span>:<span class="hljs-literal">true</span>,
+         <span class="hljs-string">&quot;searchable&quot;</span>:<span class="hljs-literal">false</span>,
+         <span class="hljs-string">&quot;currency&quot;</span>:<span class="hljs-literal">false</span>,
+         <span class="hljs-string">&quot;signed&quot;</span>:<span class="hljs-literal">true</span>,
+         <span class="hljs-string">&quot;autoIncrement&quot;</span>:<span class="hljs-literal">false</span>,
+         <span class="hljs-string">&quot;definitelyWritable&quot;</span>:<span class="hljs-literal">false</span>
+      }
+   ],
+   <span class="hljs-string">&quot;results&quot;</span>:[  
+      [  
+         <span class="hljs-string">&quot;2013-08-07&quot;</span>,
+         <span class="hljs-string">&quot;32996&quot;</span>,
+         <span class="hljs-string">&quot;15&quot;</span>,
+         <span class="hljs-string">&quot;15&quot;</span>,
+         <span class="hljs-string">&quot;Auction&quot;</span>,
+         <span class="hljs-string">&quot;10000000&quot;</span>,
+         <span class="hljs-string">&quot;49.048952730908745&quot;</span>,
+         <span class="hljs-string">&quot;49.048952730908745&quot;</span>,
+         <span class="hljs-string">&quot;49.048952730908745&quot;</span>,
+         <span class="hljs-string">&quot;1&quot;</span>
+      ],
+      [  
+         <span class="hljs-string">&quot;2013-08-07&quot;</span>,
+         <span class="hljs-string">&quot;43398&quot;</span>,
+         <span class="hljs-string">&quot;0&quot;</span>,
+         <span class="hljs-string">&quot;14&quot;</span>,
+         <span class="hljs-string">&quot;ABIN&quot;</span>,
+         <span class="hljs-string">&quot;10000633&quot;</span>,
+         <span class="hljs-string">&quot;85.78317064220418&quot;</span>,
+         <span class="hljs-string">&quot;85.78317064220418&quot;</span>,
+         <span class="hljs-string">&quot;85.78317064220418&quot;</span>,
+         <span class="hljs-string">&quot;1&quot;</span>
+      ]
+   ],
+   <span class="hljs-string">&quot;cube&quot;</span>:<span class="hljs-string">&quot;test_kylin_cube_with_slr_desc&quot;</span>,
+   <span class="hljs-string">&quot;affectedRowCount&quot;</span>:0,
+   <span class="hljs-string">&quot;isException&quot;</span>:<span class="hljs-literal">false</span>,
+   <span class="hljs-string">&quot;exceptionMessage&quot;</span>:null,
+   <span class="hljs-string">&quot;duration&quot;</span>:3451,
+   <span class="hljs-string">&quot;partial&quot;</span>:<span class="hljs-literal">false</span>
+}
+</code></pre>
+<h4 id="curl-example">Curl Example</h4>
+<pre><code>curl -X POST -H &quot;Authorization: Basic XXXXXXXXX&quot; -H &quot;Content-Type: application/json&quot; -d &apos;{ &quot;sql&quot;:&quot;select count(*) from TEST_KYLIN_FACT&quot;, &quot;project&quot;:&quot;learn_kylin&quot; }&apos; http://YOUR_HOST:7070/kylin/api/query
+</code></pre><h2 id="list-queryable-tables">List queryable tables</h2>
+<p><code>GET /tables_and_columns</code></p>
+<h4 id="request-parameters">Request Parameters</h4>
+<ul>
+<li>project - <code>required</code> <code>string</code> The project to load tables</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<pre><code class="lang-sh">[  
+   {  
+      <span class="hljs-string">&quot;columns&quot;</span>:[  
+         {  
+            <span class="hljs-string">&quot;table_NAME&quot;</span>:<span class="hljs-string">&quot;TEST_CAL_DT&quot;</span>,
+            <span class="hljs-string">&quot;table_SCHEM&quot;</span>:<span class="hljs-string">&quot;EDW&quot;</span>,
+            <span class="hljs-string">&quot;column_NAME&quot;</span>:<span class="hljs-string">&quot;CAL_DT&quot;</span>,
+            <span class="hljs-string">&quot;data_TYPE&quot;</span>:91,
+            <span class="hljs-string">&quot;nullable&quot;</span>:1,
+            <span class="hljs-string">&quot;column_SIZE&quot;</span>:-1,
+            <span class="hljs-string">&quot;buffer_LENGTH&quot;</span>:-1,
+            <span class="hljs-string">&quot;decimal_DIGITS&quot;</span>:0,
+            <span class="hljs-string">&quot;num_PREC_RADIX&quot;</span>:10,
+            <span class="hljs-string">&quot;column_DEF&quot;</span>:null,
+            <span class="hljs-string">&quot;sql_DATA_TYPE&quot;</span>:-1,
+            <span class="hljs-string">&quot;sql_DATETIME_SUB&quot;</span>:-1,
+            <span class="hljs-string">&quot;char_OCTET_LENGTH&quot;</span>:-1,
+            <span class="hljs-string">&quot;ordinal_POSITION&quot;</span>:1,
+            <span class="hljs-string">&quot;is_NULLABLE&quot;</span>:<span class="hljs-string">&quot;YES&quot;</span>,
+            <span class="hljs-string">&quot;scope_CATLOG&quot;</span>:null,
+            <span class="hljs-string">&quot;scope_SCHEMA&quot;</span>:null,
+            <span class="hljs-string">&quot;scope_TABLE&quot;</span>:null,
+            <span class="hljs-string">&quot;source_DATA_TYPE&quot;</span>:-1,
+            <span class="hljs-string">&quot;iS_AUTOINCREMENT&quot;</span>:null,
+            <span class="hljs-string">&quot;table_CAT&quot;</span>:<span class="hljs-string">&quot;defaultCatalog&quot;</span>,
+            <span class="hljs-string">&quot;remarks&quot;</span>:null,
+            <span class="hljs-string">&quot;type_NAME&quot;</span>:<span class="hljs-string">&quot;DATE&quot;</span>
+         },
+         {  
+            <span class="hljs-string">&quot;table_NAME&quot;</span>:<span class="hljs-string">&quot;TEST_CAL_DT&quot;</span>,
+            <span class="hljs-string">&quot;table_SCHEM&quot;</span>:<span class="hljs-string">&quot;EDW&quot;</span>,
+            <span class="hljs-string">&quot;column_NAME&quot;</span>:<span class="hljs-string">&quot;WEEK_BEG_DT&quot;</span>,
+            <span class="hljs-string">&quot;data_TYPE&quot;</span>:91,
+            <span class="hljs-string">&quot;nullable&quot;</span>:1,
+            <span class="hljs-string">&quot;column_SIZE&quot;</span>:-1,
+            <span class="hljs-string">&quot;buffer_LENGTH&quot;</span>:-1,
+            <span class="hljs-string">&quot;decimal_DIGITS&quot;</span>:0,
+            <span class="hljs-string">&quot;num_PREC_RADIX&quot;</span>:10,
+            <span class="hljs-string">&quot;column_DEF&quot;</span>:null,
+            <span class="hljs-string">&quot;sql_DATA_TYPE&quot;</span>:-1,
+            <span class="hljs-string">&quot;sql_DATETIME_SUB&quot;</span>:-1,
+            <span class="hljs-string">&quot;char_OCTET_LENGTH&quot;</span>:-1,
+            <span class="hljs-string">&quot;ordinal_POSITION&quot;</span>:2,
+            <span class="hljs-string">&quot;is_NULLABLE&quot;</span>:<span class="hljs-string">&quot;YES&quot;</span>,
+            <span class="hljs-string">&quot;scope_CATLOG&quot;</span>:null,
+            <span class="hljs-string">&quot;scope_SCHEMA&quot;</span>:null,
+            <span class="hljs-string">&quot;scope_TABLE&quot;</span>:null,
+            <span class="hljs-string">&quot;source_DATA_TYPE&quot;</span>:-1,
+            <span class="hljs-string">&quot;iS_AUTOINCREMENT&quot;</span>:null,
+            <span class="hljs-string">&quot;table_CAT&quot;</span>:<span class="hljs-string">&quot;defaultCatalog&quot;</span>,
+            <span class="hljs-string">&quot;remarks&quot;</span>:null,
+            <span class="hljs-string">&quot;type_NAME&quot;</span>:<span class="hljs-string">&quot;DATE&quot;</span>
+         }
+      ],
+      <span class="hljs-string">&quot;table_NAME&quot;</span>:<span class="hljs-string">&quot;TEST_CAL_DT&quot;</span>,
+      <span class="hljs-string">&quot;table_SCHEM&quot;</span>:<span class="hljs-string">&quot;EDW&quot;</span>,
+      <span class="hljs-string">&quot;ref_GENERATION&quot;</span>:null,
+      <span class="hljs-string">&quot;self_REFERENCING_COL_NAME&quot;</span>:null,
+      <span class="hljs-string">&quot;type_SCHEM&quot;</span>:null,
+      <span class="hljs-string">&quot;table_TYPE&quot;</span>:<span class="hljs-string">&quot;TABLE&quot;</span>,
+      <span class="hljs-string">&quot;table_CAT&quot;</span>:<span class="hljs-string">&quot;defaultCatalog&quot;</span>,
+      <span class="hljs-string">&quot;remarks&quot;</span>:null,
+      <span class="hljs-string">&quot;type_CAT&quot;</span>:null,
+      <span class="hljs-string">&quot;type_NAME&quot;</span>:null
+   }
+]
+</code></pre>
+<hr>
+<h2 id="list-cubes">List cubes</h2>
+<p><code>GET /cubes</code></p>
+<h4 id="request-parameters">Request Parameters</h4>
+<ul>
+<li>offset - <code>required</code> <code>int</code> Offset used by pagination</li>
+<li>limit - <code>required</code> <code>int</code> Cubes per page.</li>
+<li>cubeName - <code>optional</code> <code>string</code> Keyword for cube names. To find cubes whose name contains this keyword.</li>
+<li>projectName - <code>optional</code> <code>string</code> Project name.</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<pre><code class="lang-sh">[  
+   {  
+      <span class="hljs-string">&quot;uuid&quot;</span>:<span class="hljs-string">&quot;1eaca32a-a33e-4b69-83dd-0bb8b1f8c53b&quot;</span>,
+      <span class="hljs-string">&quot;last_modified&quot;</span>:1407831634847,
+      <span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;test_kylin_cube_with_slr_empty&quot;</span>,
+      <span class="hljs-string">&quot;owner&quot;</span>:null,
+      <span class="hljs-string">&quot;version&quot;</span>:null,
+      <span class="hljs-string">&quot;descriptor&quot;</span>:<span class="hljs-string">&quot;test_kylin_cube_with_slr_desc&quot;</span>,
+      <span class="hljs-string">&quot;cost&quot;</span>:50,
+      <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-string">&quot;DISABLED&quot;</span>,
+      <span class="hljs-string">&quot;segments&quot;</span>:[  
+      ],
+      <span class="hljs-string">&quot;create_time&quot;</span>:null,
+      <span class="hljs-string">&quot;source_records_count&quot;</span>:0,
+      <span class="hljs-string">&quot;source_records_size&quot;</span>:0,
+      <span class="hljs-string">&quot;size_kb&quot;</span>:0
+   }
+]
+</code></pre>
+<h2 id="get-cube">Get cube</h2>
+<p><code>GET /cubes/{cubeName}</code></p>
+<h4 id="path-variable">Path Variable</h4>
+<ul>
+<li>cubeName - <code>required</code> <code>string</code> Cube name to find.</li>
+</ul>
+<h2 id="get-cube-descriptor">Get cube descriptor</h2>
+<p><code>GET /cube_desc/{cubeName}</code>
+Get descriptor for specified cube instance.</p>
+<h4 id="path-variable">Path Variable</h4>
+<ul>
+<li>cubeName - <code>required</code> <code>string</code> Cube name.</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<pre><code class="lang-sh">[
+    {
+        <span class="hljs-string">&quot;uuid&quot;</span>: <span class="hljs-string">&quot;a24ca905-1fc6-4f67-985c-38fa5aeafd92&quot;</span>, 
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;test_kylin_cube_with_slr_desc&quot;</span>, 
+        <span class="hljs-string">&quot;description&quot;</span>: null, 
+        <span class="hljs-string">&quot;dimensions&quot;</span>: [
+            {
+                <span class="hljs-string">&quot;id&quot;</span>: 0, 
+                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;CAL_DT&quot;</span>, 
+                <span class="hljs-string">&quot;table&quot;</span>: <span class="hljs-string">&quot;EDW.TEST_CAL_DT&quot;</span>, 
+                <span class="hljs-string">&quot;column&quot;</span>: null, 
+                <span class="hljs-string">&quot;derived&quot;</span>: [
+                    <span class="hljs-string">&quot;WEEK_BEG_DT&quot;</span>
+                ], 
+                <span class="hljs-string">&quot;hierarchy&quot;</span>: <span class="hljs-literal">false</span>
+            }, 
+            {
+                <span class="hljs-string">&quot;id&quot;</span>: 1, 
+                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;CATEGORY&quot;</span>, 
+                <span class="hljs-string">&quot;table&quot;</span>: <span class="hljs-string">&quot;DEFAULT.TEST_CATEGORY_GROUPINGS&quot;</span>, 
+                <span class="hljs-string">&quot;column&quot;</span>: null, 
+                <span class="hljs-string">&quot;derived&quot;</span>: [
+                    <span class="hljs-string">&quot;USER_DEFINED_FIELD1&quot;</span>, 
+                    <span class="hljs-string">&quot;USER_DEFINED_FIELD3&quot;</span>, 
+                    <span class="hljs-string">&quot;UPD_DATE&quot;</span>, 
+                    <span class="hljs-string">&quot;UPD_USER&quot;</span>
+                ], 
+                <span class="hljs-string">&quot;hierarchy&quot;</span>: <span class="hljs-literal">false</span>
+            }, 
+            {
+                <span class="hljs-string">&quot;id&quot;</span>: 2, 
+                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;CATEGORY_HIERARCHY&quot;</span>, 
+                <span class="hljs-string">&quot;table&quot;</span>: <span class="hljs-string">&quot;DEFAULT.TEST_CATEGORY_GROUPINGS&quot;</span>, 
+                <span class="hljs-string">&quot;column&quot;</span>: [
+                    <span class="hljs-string">&quot;META_CATEG_NAME&quot;</span>, 
+                    <span class="hljs-string">&quot;CATEG_LVL2_NAME&quot;</span>, 
+                    <span class="hljs-string">&quot;CATEG_LVL3_NAME&quot;</span>
+                ], 
+                <span class="hljs-string">&quot;derived&quot;</span>: null, 
+                <span class="hljs-string">&quot;hierarchy&quot;</span>: <span class="hljs-literal">true</span>
+            }, 
+            {
+                <span class="hljs-string">&quot;id&quot;</span>: 3, 
+                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;LSTG_FORMAT_NAME&quot;</span>, 
+                <span class="hljs-string">&quot;table&quot;</span>: <span class="hljs-string">&quot;DEFAULT.TEST_KYLIN_FACT&quot;</span>, 
+                <span class="hljs-string">&quot;column&quot;</span>: [
+                    <span class="hljs-string">&quot;LSTG_FORMAT_NAME&quot;</span>
+                ], 
+                <span class="hljs-string">&quot;derived&quot;</span>: null, 
+                <span class="hljs-string">&quot;hierarchy&quot;</span>: <span class="hljs-literal">false</span>
+            }, 
+            {
+                <span class="hljs-string">&quot;id&quot;</span>: 4, 
+                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;SITE_ID&quot;</span>, 
+                <span class="hljs-string">&quot;table&quot;</span>: <span class="hljs-string">&quot;EDW.TEST_SITES&quot;</span>, 
+                <span class="hljs-string">&quot;column&quot;</span>: null, 
+                <span class="hljs-string">&quot;derived&quot;</span>: [
+                    <span class="hljs-string">&quot;SITE_NAME&quot;</span>, 
+                    <span class="hljs-string">&quot;CRE_USER&quot;</span>
+                ], 
+                <span class="hljs-string">&quot;hierarchy&quot;</span>: <span class="hljs-literal">false</span>
+            }, 
+            {
+                <span class="hljs-string">&quot;id&quot;</span>: 5, 
+                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;SELLER_TYPE_CD&quot;</span>, 
+                <span class="hljs-string">&quot;table&quot;</span>: <span class="hljs-string">&quot;EDW.TEST_SELLER_TYPE_DIM&quot;</span>, 
+                <span class="hljs-string">&quot;column&quot;</span>: null, 
+                <span class="hljs-string">&quot;derived&quot;</span>: [
+                    <span class="hljs-string">&quot;SELLER_TYPE_DESC&quot;</span>
+                ], 
+                <span class="hljs-string">&quot;hierarchy&quot;</span>: <span class="hljs-literal">false</span>
+            }, 
+            {
+                <span class="hljs-string">&quot;id&quot;</span>: 6, 
+                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;SELLER_ID&quot;</span>, 
+                <span class="hljs-string">&quot;table&quot;</span>: <span class="hljs-string">&quot;DEFAULT.TEST_KYLIN_FACT&quot;</span>, 
+                <span class="hljs-string">&quot;column&quot;</span>: [
+                    <span class="hljs-string">&quot;SELLER_ID&quot;</span>
+                ], 
+                <span class="hljs-string">&quot;derived&quot;</span>: null, 
+                <span class="hljs-string">&quot;hierarchy&quot;</span>: <span class="hljs-literal">false</span>
+            }
+        ], 
+        <span class="hljs-string">&quot;measures&quot;</span>: [
+            {
+                <span class="hljs-string">&quot;id&quot;</span>: 1, 
+                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;GMV_SUM&quot;</span>, 
+                <span class="hljs-string">&quot;function&quot;</span>: {
+                    <span class="hljs-string">&quot;expression&quot;</span>: <span class="hljs-string">&quot;SUM&quot;</span>, 
+                    <span class="hljs-string">&quot;parameter&quot;</span>: {
+                        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;column&quot;</span>, 
+                        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;PRICE&quot;</span>, 
+                        <span class="hljs-string">&quot;next_parameter&quot;</span>: null
+                    }, 
+                    <span class="hljs-string">&quot;returntype&quot;</span>: <span class="hljs-string">&quot;decimal(19,4)&quot;</span>
+                }, 
+                <span class="hljs-string">&quot;dependent_measure_ref&quot;</span>: null
+            }, 
+            {
+                <span class="hljs-string">&quot;id&quot;</span>: 2, 
+                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;GMV_MIN&quot;</span>, 
+                <span class="hljs-string">&quot;function&quot;</span>: {
+                    <span class="hljs-string">&quot;expression&quot;</span>: <span class="hljs-string">&quot;MIN&quot;</span>, 
+                    <span class="hljs-string">&quot;parameter&quot;</span>: {
+                        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;column&quot;</span>, 
+                        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;PRICE&quot;</span>, 
+                        <span class="hljs-string">&quot;next_parameter&quot;</span>: null
+                    }, 
+                    <span class="hljs-string">&quot;returntype&quot;</span>: <span class="hljs-string">&quot;decimal(19,4)&quot;</span>
+                }, 
+                <span class="hljs-string">&quot;dependent_measure_ref&quot;</span>: null
+            }, 
+            {
+                <span class="hljs-string">&quot;id&quot;</span>: 3, 
+                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;GMV_MAX&quot;</span>, 
+                <span class="hljs-string">&quot;function&quot;</span>: {
+                    <span class="hljs-string">&quot;expression&quot;</span>: <span class="hljs-string">&quot;MAX&quot;</span>, 
+                    <span class="hljs-string">&quot;parameter&quot;</span>: {
+                        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;column&quot;</span>, 
+                        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;PRICE&quot;</span>, 
+                        <span class="hljs-string">&quot;next_parameter&quot;</span>: null
+                    }, 
+                    <span class="hljs-string">&quot;returntype&quot;</span>: <span class="hljs-string">&quot;decimal(19,4)&quot;</span>
+                }, 
+                <span class="hljs-string">&quot;dependent_measure_ref&quot;</span>: null
+            }, 
+            {
+                <span class="hljs-string">&quot;id&quot;</span>: 4, 
+                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;TRANS_CNT&quot;</span>, 
+                <span class="hljs-string">&quot;function&quot;</span>: {
+                    <span class="hljs-string">&quot;expression&quot;</span>: <span class="hljs-string">&quot;COUNT&quot;</span>, 
+                    <span class="hljs-string">&quot;parameter&quot;</span>: {
+                        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;constant&quot;</span>, 
+                        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>, 
+                        <span class="hljs-string">&quot;next_parameter&quot;</span>: null
+                    }, 
+                    <span class="hljs-string">&quot;returntype&quot;</span>: <span class="hljs-string">&quot;bigint&quot;</span>
+                }, 
+                <span class="hljs-string">&quot;dependent_measure_ref&quot;</span>: null
+            }, 
+            {
+                <span class="hljs-string">&quot;id&quot;</span>: 5, 
+                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;ITEM_COUNT_SUM&quot;</span>, 
+                <span class="hljs-string">&quot;function&quot;</span>: {
+                    <span class="hljs-string">&quot;expression&quot;</span>: <span class="hljs-string">&quot;SUM&quot;</span>, 
+                    <span class="hljs-string">&quot;parameter&quot;</span>: {
+                        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;column&quot;</span>, 
+                        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;ITEM_COUNT&quot;</span>, 
+                        <span class="hljs-string">&quot;next_parameter&quot;</span>: null
+                    }, 
+                    <span class="hljs-string">&quot;returntype&quot;</span>: <span class="hljs-string">&quot;bigint&quot;</span>
+                }, 
+                <span class="hljs-string">&quot;dependent_measure_ref&quot;</span>: null
+            }
+        ], 
+        <span class="hljs-string">&quot;rowkey&quot;</span>: {
+            <span class="hljs-string">&quot;rowkey_columns&quot;</span>: [
+                {
+                    <span class="hljs-string">&quot;column&quot;</span>: <span class="hljs-string">&quot;SELLER_ID&quot;</span>, 
+                    <span class="hljs-string">&quot;length&quot;</span>: 18, 
+                    <span class="hljs-string">&quot;dictionary&quot;</span>: null, 
+                    <span class="hljs-string">&quot;mandatory&quot;</span>: <span class="hljs-literal">true</span>
+                }, 
+                {
+                    <span class="hljs-string">&quot;column&quot;</span>: <span class="hljs-string">&quot;CAL_DT&quot;</span>, 
+                    <span class="hljs-string">&quot;length&quot;</span>: 0, 
+                    <span class="hljs-string">&quot;dictionary&quot;</span>: <span class="hljs-string">&quot;true&quot;</span>, 
+                    <span class="hljs-string">&quot;mandatory&quot;</span>: <span class="hljs-literal">false</span>
+                }, 
+                {
+                    <span class="hljs-string">&quot;column&quot;</span>: <span class="hljs-string">&quot;LEAF_CATEG_ID&quot;</span>, 
+                    <span class="hljs-string">&quot;length&quot;</span>: 0, 
+                    <span class="hljs-string">&quot;dictionary&quot;</span>: <span class="hljs-string">&quot;true&quot;</span>, 
+                    <span class="hljs-string">&quot;mandatory&quot;</span>: <span class="hljs-literal">false</span>
+                }, 
+                {
+                    <span class="hljs-string">&quot;column&quot;</span>: <span class="hljs-string">&quot;META_CATEG_NAME&quot;</span>, 
+                    <span class="hljs-string">&quot;length&quot;</span>: 0, 
+                    <span class="hljs-string">&quot;dictionary&quot;</span>: <span class="hljs-string">&quot;true&quot;</span>, 
+                    <span class="hljs-string">&quot;mandatory&quot;</span>: <span class="hljs-literal">false</span>
+                }, 
+                {
+                    <span class="hljs-string">&quot;column&quot;</span>: <span class="hljs-string">&quot;CATEG_LVL2_NAME&quot;</span>, 
+                    <span class="hljs-string">&quot;length&quot;</span>: 0, 
+                    <span class="hljs-string">&quot;dictionary&quot;</span>: <span class="hljs-string">&quot;true&quot;</span>, 
+                    <span class="hljs-string">&quot;mandatory&quot;</span>: <span class="hljs-literal">false</span>
+                }, 
+                {
+                    <span class="hljs-string">&quot;column&quot;</span>: <span class="hljs-string">&quot;CATEG_LVL3_NAME&quot;</span>, 
+                    <span class="hljs-string">&quot;length&quot;</span>: 0, 
+                    <span class="hljs-string">&quot;dictionary&quot;</span>: <span class="hljs-string">&quot;true&quot;</span>, 
+                    <span class="hljs-string">&quot;mandatory&quot;</span>: <span class="hljs-literal">false</span>
+                }, 
+                {
+                    <span class="hljs-string">&quot;column&quot;</span>: <span class="hljs-string">&quot;LSTG_FORMAT_NAME&quot;</span>, 
+                    <span class="hljs-string">&quot;length&quot;</span>: 12, 
+                    <span class="hljs-string">&quot;dictionary&quot;</span>: null, 
+                    <span class="hljs-string">&quot;mandatory&quot;</span>: <span class="hljs-literal">false</span>
+                }, 
+                {
+                    <span class="hljs-string">&quot;column&quot;</span>: <span class="hljs-string">&quot;LSTG_SITE_ID&quot;</span>, 
+                    <span class="hljs-string">&quot;length&quot;</span>: 0, 
+                    <span class="hljs-string">&quot;dictionary&quot;</span>: <span class="hljs-string">&quot;true&quot;</span>, 
+                    <span class="hljs-string">&quot;mandatory&quot;</span>: <span class="hljs-literal">false</span>
+                }, 
+                {
+                    <span class="hljs-string">&quot;column&quot;</span>: <span class="hljs-string">&quot;SLR_SEGMENT_CD&quot;</span>, 
+                    <span class="hljs-string">&quot;length&quot;</span>: 0, 
+                    <span class="hljs-string">&quot;dictionary&quot;</span>: <span class="hljs-string">&quot;true&quot;</span>, 
+                    <span class="hljs-string">&quot;mandatory&quot;</span>: <span class="hljs-literal">false</span>
+                }
+            ], 
+            <span class="hljs-string">&quot;aggregation_groups&quot;</span>: [
+                [
+                    <span class="hljs-string">&quot;LEAF_CATEG_ID&quot;</span>, 
+                    <span class="hljs-string">&quot;META_CATEG_NAME&quot;</span>, 
+                    <span class="hljs-string">&quot;CATEG_LVL2_NAME&quot;</span>, 
+                    <span class="hljs-string">&quot;CATEG_LVL3_NAME&quot;</span>, 
+                    <span class="hljs-string">&quot;CAL_DT&quot;</span>
+                ]
+            ]
+        }, 
+        <span class="hljs-string">&quot;signature&quot;</span>: <span class="hljs-string">&quot;lsLAl2jL62ZApmOLZqWU3g==&quot;</span>, 
+        <span class="hljs-string">&quot;last_modified&quot;</span>: 1445850327000, 
+        <span class="hljs-string">&quot;model_name&quot;</span>: <span class="hljs-string">&quot;test_kylin_with_slr_model_desc&quot;</span>, 
+        <span class="hljs-string">&quot;null_string&quot;</span>: null, 
+        <span class="hljs-string">&quot;hbase_mapping&quot;</span>: {
+            <span class="hljs-string">&quot;column_family&quot;</span>: [
+                {
+                    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;F1&quot;</span>, 
+                    <span class="hljs-string">&quot;columns&quot;</span>: [
+                        {
+                            <span class="hljs-string">&quot;qualifier&quot;</span>: <span class="hljs-string">&quot;M&quot;</span>, 
+                            <span class="hljs-string">&quot;measure_refs&quot;</span>: [
+                                <span class="hljs-string">&quot;GMV_SUM&quot;</span>, 
+                                <span class="hljs-string">&quot;GMV_MIN&quot;</span>, 
+                                <span class="hljs-string">&quot;GMV_MAX&quot;</span>, 
+                                <span class="hljs-string">&quot;TRANS_CNT&quot;</span>, 
+                                <span class="hljs-string">&quot;ITEM_COUNT_SUM&quot;</span>
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }, 
+        <span class="hljs-string">&quot;notify_list&quot;</span>: null, 
+        <span class="hljs-string">&quot;auto_merge_time_ranges&quot;</span>: null, 
+        <span class="hljs-string">&quot;retention_range&quot;</span>: 0
+    }
+]
+</code></pre>
+<h2 id="get-data-model">Get data model</h2>
+<p><code>GET /model/{modelName}</code></p>
+<h4 id="path-variable">Path Variable</h4>
+<ul>
+<li>modelName - <code>required</code> <code>string</code> Data model name, by default it should be the same with cube name.</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<pre><code class="lang-sh">{
+    <span class="hljs-string">&quot;uuid&quot;</span>: <span class="hljs-string">&quot;ff527b94-f860-44c3-8452-93b17774c647&quot;</span>, 
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;test_kylin_with_slr_model_desc&quot;</span>, 
+    <span class="hljs-string">&quot;lookups&quot;</span>: [
+        {
+            <span class="hljs-string">&quot;table&quot;</span>: <span class="hljs-string">&quot;EDW.TEST_CAL_DT&quot;</span>, 
+            <span class="hljs-string">&quot;join&quot;</span>: {
+                <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;inner&quot;</span>, 
+                <span class="hljs-string">&quot;primary_key&quot;</span>: [
+                    <span class="hljs-string">&quot;CAL_DT&quot;</span>
+                ], 
+                <span class="hljs-string">&quot;foreign_key&quot;</span>: [
+                    <span class="hljs-string">&quot;CAL_DT&quot;</span>
+                ]
+            }
+        }, 
+        {
+            <span class="hljs-string">&quot;table&quot;</span>: <span class="hljs-string">&quot;DEFAULT.TEST_CATEGORY_GROUPINGS&quot;</span>, 
+            <span class="hljs-string">&quot;join&quot;</span>: {
+                <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;inner&quot;</span>, 
+                <span class="hljs-string">&quot;primary_key&quot;</span>: [
+                    <span class="hljs-string">&quot;LEAF_CATEG_ID&quot;</span>, 
+                    <span class="hljs-string">&quot;SITE_ID&quot;</span>
+                ], 
+                <span class="hljs-string">&quot;foreign_key&quot;</span>: [
+                    <span class="hljs-string">&quot;LEAF_CATEG_ID&quot;</span>, 
+                    <span class="hljs-string">&quot;LSTG_SITE_ID&quot;</span>
+                ]
+            }
+        }
+    ], 
+    <span class="hljs-string">&quot;capacity&quot;</span>: <span class="hljs-string">&quot;MEDIUM&quot;</span>, 
+    <span class="hljs-string">&quot;last_modified&quot;</span>: 1442372116000, 
+    <span class="hljs-string">&quot;fact_table&quot;</span>: <span class="hljs-string">&quot;DEFAULT.TEST_KYLIN_FACT&quot;</span>, 
+    <span class="hljs-string">&quot;filter_condition&quot;</span>: null, 
+    <span class="hljs-string">&quot;partition_desc&quot;</span>: {
+        <span class="hljs-string">&quot;partition_date_column&quot;</span>: <span class="hljs-string">&quot;DEFAULT.TEST_KYLIN_FACT.CAL_DT&quot;</span>, 
+        <span class="hljs-string">&quot;partition_date_start&quot;</span>: 0, 
+        <span class="hljs-string">&quot;partition_date_format&quot;</span>: <span class="hljs-string">&quot;yyyy-MM-dd&quot;</span>, 
+        <span class="hljs-string">&quot;partition_type&quot;</span>: <span class="hljs-string">&quot;APPEND&quot;</span>, 
+        <span class="hljs-string">&quot;partition_condition_builder&quot;</span>: <span class="hljs-string">&quot;org.apache.kylin.metadata.model.PartitionDesc<span class="hljs-variable">$DefaultPartitionConditionBuilder</span>&quot;</span>
+    }
+}
+</code></pre>
+<h2 id="build-cube">Build cube</h2>
+<p><code>PUT /cubes/{cubeName}/rebuild</code></p>
+<h4 id="path-variable">Path Variable</h4>
+<ul>
+<li>cubeName - <code>required</code> <code>string</code> Cube name.</li>
+</ul>
+<h4 id="request-body">Request Body</h4>
+<ul>
+<li>startTime - <code>required</code> <code>long</code> Start timestamp of data to build, e.g. 1388563200000 for 2014-1-1</li>
+<li>endTime - <code>required</code> <code>long</code> End timestamp of data to build</li>
+<li>buildType - <code>required</code> <code>string</code> Supported build type: &apos;BUILD&apos;, &apos;MERGE&apos;, &apos;REFRESH&apos;</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<pre><code>{  
+   &quot;uuid&quot;:&quot;c143e0e4-ac5f-434d-acf3-46b0d15e3dc6&quot;,
+   &quot;last_modified&quot;:1407908916705,
+   &quot;name&quot;:&quot;test_kylin_cube_with_slr_empty - 19700101000000_20140731160000 - BUILD - PDT 2014-08-12 22:48:36&quot;,
+   &quot;type&quot;:&quot;BUILD&quot;,
+   &quot;duration&quot;:0,
+   &quot;related_cube&quot;:&quot;test_kylin_cube_with_slr_empty&quot;,
+   &quot;related_segment&quot;:&quot;19700101000000_20140731160000&quot;,
+   &quot;exec_start_time&quot;:0,
+   &quot;exec_end_time&quot;:0,
+   &quot;mr_waiting&quot;:0,
+   &quot;steps&quot;:[  
+      {  
+         &quot;interruptCmd&quot;:null,
+         &quot;name&quot;:&quot;Create Intermediate Flat Hive Table&quot;,
+         &quot;sequence_id&quot;:0,
+         &quot;exec_cmd&quot;:&quot;hive -e \&quot;DROP TABLE IF EXISTS kylin_intermediate_test_kylin_cube_with_slr_desc_19700101000000_20140731160000_c143e0e4_ac5f_434d_acf3_46b0d15e3dc6;\nCREATE EXTERNAL TABLE IF NOT EXISTS kylin_intermediate_test_kylin_cube_with_slr_desc_19700101000000_20140731160000_c143e0e4_ac5f_434d_acf3_46b0d15e3dc6\n(\nCAL_DT date\n,LEAF_CATEG_ID int\n,LSTG_SITE_ID int\n,META_CATEG_NAME string\n,CATEG_LVL2_NAME string\n,CATEG_LVL3_NAME string\n,LSTG_FORMAT_NAME string\n,SLR_SEGMENT_CD smallint\n,SELLER_ID bigint\n,PRICE decimal\n)\nROW FORMAT DELIMITED FIELDS TERMINATED BY &apos;\\177&apos;\nSTORED AS SEQUENCEFILE\nLOCATION &apos;/tmp/kylin-c143e0e4-ac5f-434d-acf3-46b0d15e3dc6/kylin_intermediate_test_kylin_cube_with_slr_desc_19700101000000_20140731160000_c143e0e4_ac5f_434d_acf3_46b0d15e3dc6&apos;;\nSET mapreduce.job.split.metainfo.maxsize=-1;\nSET mapred.compress.map.output=true;\nSET mapred.map.output.compression.codec=com.hadoop.compression.lzo.LzoCodec;\nSET mapred.output.compress=true;\nSET mapred.output.compression.codec=com.hadoop.compression.lzo.LzoCodec;\nSET mapred.output.compression.type=BLOCK;\nSET mapreduce.job.max.split.locations=2000;\nSET hive.exec.compress.output=true;\nSET hive.auto.convert.join.noconditionaltask = true;\nSET hive.auto.convert.join.noconditionaltask.size = 300000000;\nINSERT OVERWRITE TABLE kylin_intermediate_test_kylin_cube_with_slr_desc_19700101000000_20140731160000_c143e0e4_ac5f_434d_acf3_46b0d15e3dc6\nSELECT\nTEST_KYLIN_FACT.CAL_DT\n,TEST_KYLIN_FACT.LEAF_CATEG_ID\n,TEST_KYLIN_FACT.LSTG_SITE_ID\n,TEST_CATEGORY_GROUPINGS.META_CATEG_NAME\n,TEST_CATEGORY_GROUPINGS.CATEG_LVL2_NAME\n,TEST_CATEGORY_GROUPINGS.CATEG_LVL3_NAME\n,TEST_KYLIN_FACT.LSTG_FORMAT_NAME\n,TEST_KYLIN_FACT.SLR_SEGMENT_CD\n,TEST_KYLIN_FACT.SELLER_ID\n,TEST_KYLIN_FACT.PRICE\nFROM TEST_KYLIN_FACT\nINNER JOIN TEST_CAL_DT\nON TEST_KYLIN_FACT.CAL_DT = TEST_CAL_DT.CAL_DT\nINNER JOIN TEST_CATEGORY_GROUPINGS\nON TEST_KYLIN_FACT.LEAF_CATEG_ID = TEST_CATEGORY_GROUPINGS.LEAF_CATEG_ID AND TEST_KYLIN_FACT.LSTG_SITE_ID = TEST_CATEGORY_GROUPINGS.SITE_ID\nINNER JOIN TEST_SITES\nON TEST_KYLIN_FACT.LSTG_SITE_ID = TEST_SITES.SITE_ID\nINNER JOIN TEST_SELLER_TYPE_DIM\nON TEST_KYLIN_FACT.SLR_SEGMENT_CD = TEST_SELLER_TYPE_DIM.SELLER_TYPE_CD\nWHERE (test_kylin_fact.cal_dt &lt; &apos;2014-07-31 16:00:00&apos;)\n;\n\&quot;&quot;,
+         &quot;interrupt_cmd&quot;:null,
+         &quot;exec_start_time&quot;:0,
+         &quot;exec_end_time&quot;:0,
+         &quot;exec_wait_time&quot;:0,
+         &quot;step_status&quot;:&quot;PENDING&quot;,
+         &quot;cmd_type&quot;:&quot;SHELL_CMD_HADOOP&quot;,
+         &quot;info&quot;:null,
+         &quot;run_async&quot;:false
+      },
+      {  
+         &quot;interruptCmd&quot;:null,
+         &quot;name&quot;:&quot;Extract Fact Table Distinct Columns&quot;,
+         &quot;sequence_id&quot;:1,
+         &quot;exec_cmd&quot;:&quot; -conf C:/kylin/Kylin/server/src/main/resources/hadoop_job_conf_medium.xml -cubename test_kylin_cube_with_slr_empty -input /tmp/kylin-c143e0e4-ac5f-434d-acf3-46b0d15e3dc6/kylin_intermediate_test_kylin_cube_with_slr_desc_19700101000000_20140731160000_c143e0e4_ac5f_434d_acf3_46b0d15e3dc6 -output /tmp/kylin-c143e0e4-ac5f-434d-acf3-46b0d15e3dc6/test_kylin_cube_with_slr_empty/fact_distinct_columns -jobname Kylin_Fact_Distinct_Columns_test_kylin_cube_with_slr_empty_Step_1&quot;,
+         &quot;interrupt_cmd&quot;:null,
+         &quot;exec_start_time&quot;:0,
+         &quot;exec_end_time&quot;:0,
+         &quot;exec_wait_time&quot;:0,
+         &quot;step_status&quot;:&quot;PENDING&quot;,
+         &quot;cmd_type&quot;:&quot;JAVA_CMD_HADOOP_FACTDISTINCT&quot;,
+         &quot;info&quot;:null,
+         &quot;run_async&quot;:true
+      },
+      {  
+         &quot;interruptCmd&quot;:null,
+         &quot;name&quot;:&quot;Load HFile to HBase Table&quot;,
+         &quot;sequence_id&quot;:12,
+         &quot;exec_cmd&quot;:&quot; -input /tmp/kylin-c143e0e4-ac5f-434d-acf3-46b0d15e3dc6/test_kylin_cube_with_slr_empty/hfile/ -htablename KYLIN-CUBE-TEST_KYLIN_CUBE_WITH_SLR_EMPTY-19700101000000_20140731160000_11BB4326-5975-4358-804C-70D53642E03A -cubename test_kylin_cube_with_slr_empty&quot;,
+         &quot;interrupt_cmd&quot;:null,
+         &quot;exec_start_time&quot;:0,
+         &quot;exec_end_time&quot;:0,
+         &quot;exec_wait_time&quot;:0,
+         &quot;step_status&quot;:&quot;PENDING&quot;,
+         &quot;cmd_type&quot;:&quot;JAVA_CMD_HADOOP_NO_MR_BULKLOAD&quot;,
+         &quot;info&quot;:null,
+         &quot;run_async&quot;:false
+      }
+   ],
+   &quot;job_status&quot;:&quot;PENDING&quot;,
+   &quot;progress&quot;:0.0
+}
+</code></pre><h2 id="enable-cube">Enable Cube</h2>
+<p><code>PUT /cubes/{cubeName}/enable</code></p>
+<h4 id="path-variable">Path variable</h4>
+<ul>
+<li>cubeName - <code>required</code> <code>string</code> Cube name.</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<pre><code class="lang-sh">{  
+   <span class="hljs-string">&quot;uuid&quot;</span>:<span class="hljs-string">&quot;1eaca32a-a33e-4b69-83dd-0bb8b1f8c53b&quot;</span>,
+   <span class="hljs-string">&quot;last_modified&quot;</span>:1407909046305,
+   <span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;test_kylin_cube_with_slr_ready&quot;</span>,
+   <span class="hljs-string">&quot;owner&quot;</span>:null,
+   <span class="hljs-string">&quot;version&quot;</span>:null,
+   <span class="hljs-string">&quot;descriptor&quot;</span>:<span class="hljs-string">&quot;test_kylin_cube_with_slr_desc&quot;</span>,
+   <span class="hljs-string">&quot;cost&quot;</span>:50,
+   <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-string">&quot;ACTIVE&quot;</span>,
+   <span class="hljs-string">&quot;segments&quot;</span>:[  
+      {  
+         <span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;19700101000000_20140531160000&quot;</span>,
+         <span class="hljs-string">&quot;storage_location_identifier&quot;</span>:<span class="hljs-string">&quot;KYLIN-CUBE-TEST_KYLIN_CUBE_WITH_SLR_READY-19700101000000_20140531160000_BF043D2D-9A4A-45E9-AA59-5A17D3F34A50&quot;</span>,
+         <span class="hljs-string">&quot;date_range_start&quot;</span>:0,
+         <span class="hljs-string">&quot;date_range_end&quot;</span>:1401552000000,
+         <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-string">&quot;READY&quot;</span>,
+         <span class="hljs-string">&quot;size_kb&quot;</span>:4758,
+         <span class="hljs-string">&quot;source_records&quot;</span>:6000,
+         <span class="hljs-string">&quot;source_records_size&quot;</span>:620356,
+         <span class="hljs-string">&quot;last_build_time&quot;</span>:1407832663227,
+         <span class="hljs-string">&quot;last_build_job_id&quot;</span>:<span class="hljs-string">&quot;2c7a2b63-b052-4a51-8b09-0c24b5792cda&quot;</span>,
+         <span class="hljs-string">&quot;binary_signature&quot;</span>:null,
+         <span class="hljs-string">&quot;dictionaries&quot;</span>:{  
+            <span class="hljs-string">&quot;TEST_CATEGORY_GROUPINGS/CATEG_LVL2_NAME&quot;</span>:<span class="hljs-string">&quot;/dict/TEST_CATEGORY_GROUPINGS/CATEG_LVL2_NAME/16d8185c-ee6b-4f8c-a919-756d9809f937.dict&quot;</span>,
+            <span class="hljs-string">&quot;TEST_KYLIN_FACT/LSTG_SITE_ID&quot;</span>:<span class="hljs-string">&quot;/dict/TEST_SITES/SITE_ID/0bec6bb3-1b0d-469c-8289-b8c4ca5d5001.dict&quot;</span>,
+            <span class="hljs-string">&quot;TEST_KYLIN_FACT/SLR_SEGMENT_CD&quot;</span>:<span class="hljs-string">&quot;/dict/TEST_SELLER_TYPE_DIM/SELLER_TYPE_CD/0c5d77ec-316b-47e0-ba9a-0616be890ad6.dict&quot;</span>,
+            <span class="hljs-string">&quot;TEST_KYLIN_FACT/CAL_DT&quot;</span>:<span class="hljs-string">&quot;/dict/PREDEFINED/date(yyyy-mm-dd)/64ac4f82-f2af-476e-85b9-f0805001014e.dict&quot;</span>,
+            <span class="hljs-string">&quot;TEST_CATEGORY_GROUPINGS/CATEG_LVL3_NAME&quot;</span>:<span class="hljs-string">&quot;/dict/TEST_CATEGORY_GROUPINGS/CATEG_LVL3_NAME/270fbfb0-281c-4602-8413-2970a7439c47.dict&quot;</span>,
+            <span class="hljs-string">&quot;TEST_KYLIN_FACT/LEAF_CATEG_ID&quot;</span>:<span class="hljs-string">&quot;/dict/TEST_CATEGORY_GROUPINGS/LEAF_CATEG_ID/2602386c-debb-4968-8d2f-b52b8215e385.dict&quot;</span>,
+            <span class="hljs-string">&quot;TEST_CATEGORY_GROUPINGS/META_CATEG_NAME&quot;</span>:<span class="hljs-string">&quot;/dict/TEST_CATEGORY_GROUPINGS/META_CATEG_NAME/0410d2c4-4686-40bc-ba14-170042a2de94.dict&quot;</span>
+         },
+         <span class="hljs-string">&quot;snapshots&quot;</span>:{  
+            <span class="hljs-string">&quot;TEST_CAL_DT&quot;</span>:<span class="hljs-string">&quot;/table_snapshot/TEST_CAL_DT.csv/8f7cfc8a-020d-4019-b419-3c6deb0ffaa0.snapshot&quot;</span>,
+            <span class="hljs-string">&quot;TEST_SELLER_TYPE_DIM&quot;</span>:<span class="hljs-string">&quot;/table_snapshot/TEST_SELLER_TYPE_DIM.csv/c60fd05e-ac94-4016-9255-96521b273b81.snapshot&quot;</span>,
+            <span class="hljs-string">&quot;TEST_CATEGORY_GROUPINGS&quot;</span>:<span class="hljs-string">&quot;/table_snapshot/TEST_CATEGORY_GROUPINGS.csv/363f4a59-b725-4459-826d-3188bde6a971.snapshot&quot;</span>,
+            <span class="hljs-string">&quot;TEST_SITES&quot;</span>:<span class="hljs-string">&quot;/table_snapshot/TEST_SITES.csv/78e0aecc-3ec6-4406-b86e-bac4b10ea63b.snapshot&quot;</span>
+         }
+      }
+   ],
+   <span class="hljs-string">&quot;create_time&quot;</span>:null,
+   <span class="hljs-string">&quot;source_records_count&quot;</span>:6000,
+   <span class="hljs-string">&quot;source_records_size&quot;</span>:0,
+   <span class="hljs-string">&quot;size_kb&quot;</span>:4758
+}
+</code></pre>
+<h2 id="disable-cube">Disable Cube</h2>
+<p><code>PUT /cubes/{cubeName}/disable</code></p>
+<h4 id="path-variable">Path variable</h4>
+<ul>
+<li>cubeName - <code>required</code> <code>string</code> Cube name.</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<p>(Same as &quot;Enable Cube&quot;)</p>
+<h2 id="purge-cube">Purge Cube</h2>
+<p><code>PUT /cubes/{cubeName}/purge</code></p>
+<h4 id="path-variable">Path variable</h4>
+<ul>
+<li>cubeName - <code>required</code> <code>string</code> Cube name.</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<p>(Same as &quot;Enable Cube&quot;)</p>
+<hr>
+<h2 id="resume-job">Resume Job</h2>
+<p><code>PUT /jobs/{jobId}/resume</code></p>
+<h4 id="path-variable">Path variable</h4>
+<ul>
+<li>jobId - <code>required</code> <code>string</code> Job id.</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<pre><code>{  
+   &quot;uuid&quot;:&quot;c143e0e4-ac5f-434d-acf3-46b0d15e3dc6&quot;,
+   &quot;last_modified&quot;:1407908916705,
+   &quot;name&quot;:&quot;test_kylin_cube_with_slr_empty - 19700101000000_20140731160000 - BUILD - PDT 2014-08-12 22:48:36&quot;,
+   &quot;type&quot;:&quot;BUILD&quot;,
+   &quot;duration&quot;:0,
+   &quot;related_cube&quot;:&quot;test_kylin_cube_with_slr_empty&quot;,
+   &quot;related_segment&quot;:&quot;19700101000000_20140731160000&quot;,
+   &quot;exec_start_time&quot;:0,
+   &quot;exec_end_time&quot;:0,
+   &quot;mr_waiting&quot;:0,
+   &quot;steps&quot;:[  
+      {  
+         &quot;interruptCmd&quot;:null,
+         &quot;name&quot;:&quot;Create Intermediate Flat Hive Table&quot;,
+         &quot;sequence_id&quot;:0,
+         &quot;exec_cmd&quot;:&quot;hive -e \&quot;DROP TABLE IF EXISTS kylin_intermediate_test_kylin_cube_with_slr_desc_19700101000000_20140731160000_c143e0e4_ac5f_434d_acf3_46b0d15e3dc6;\nCREATE EXTERNAL TABLE IF NOT EXISTS kylin_intermediate_test_kylin_cube_with_slr_desc_19700101000000_20140731160000_c143e0e4_ac5f_434d_acf3_46b0d15e3dc6\n(\nCAL_DT date\n,LEAF_CATEG_ID int\n,LSTG_SITE_ID int\n,META_CATEG_NAME string\n,CATEG_LVL2_NAME string\n,CATEG_LVL3_NAME string\n,LSTG_FORMAT_NAME string\n,SLR_SEGMENT_CD smallint\n,SELLER_ID bigint\n,PRICE decimal\n)\nROW FORMAT DELIMITED FIELDS TERMINATED BY &apos;\\177&apos;\nSTORED AS SEQUENCEFILE\nLOCATION &apos;/tmp/kylin-c143e0e4-ac5f-434d-acf3-46b0d15e3dc6/kylin_intermediate_test_kylin_cube_with_slr_desc_19700101000000_20140731160000_c143e0e4_ac5f_434d_acf3_46b0d15e3dc6&apos;;\nSET mapreduce.job.split.metainfo.maxsize=-1;\nSET mapred.compress.map.output=true;\nSET mapred.map.output.compression.codec=com.hadoop.compression.lzo.LzoCodec;\nSET mapred.output.compress=true;\nSET mapred.output.compression.codec=com.hadoop.compression.lzo.LzoCodec;\nSET mapred.output.compression.type=BLOCK;\nSET mapreduce.job.max.split.locations=2000;\nSET hive.exec.compress.output=true;\nSET hive.auto.convert.join.noconditionaltask = true;\nSET hive.auto.convert.join.noconditionaltask.size = 300000000;\nINSERT OVERWRITE TABLE kylin_intermediate_test_kylin_cube_with_slr_desc_19700101000000_20140731160000_c143e0e4_ac5f_434d_acf3_46b0d15e3dc6\nSELECT\nTEST_KYLIN_FACT.CAL_DT\n,TEST_KYLIN_FACT.LEAF_CATEG_ID\n,TEST_KYLIN_FACT.LSTG_SITE_ID\n,TEST_CATEGORY_GROUPINGS.META_CATEG_NAME\n,TEST_CATEGORY_GROUPINGS.CATEG_LVL2_NAME\n,TEST_CATEGORY_GROUPINGS.CATEG_LVL3_NAME\n,TEST_KYLIN_FACT.LSTG_FORMAT_NAME\n,TEST_KYLIN_FACT.SLR_SEGMENT_CD\n,TEST_KYLIN_FACT.SELLER_ID\n,TEST_KYLIN_FACT.PRICE\nFROM TEST_KYLIN_FACT\nINNER JOIN TEST_CAL_DT\nON TEST_KYLIN_FACT.CAL_DT = TEST_CAL_DT.CAL_DT\nINNER JOIN TEST_CATEGORY_GROUPINGS\nON TEST_KYLIN_FACT.LEAF_CATEG_ID = TEST_CATEGORY_GROUPINGS.LEAF_CATEG_ID AND TEST_KYLIN_FACT.LSTG_SITE_ID = TEST_CATEGORY_GROUPINGS.SITE_ID\nINNER JOIN TEST_SITES\nON TEST_KYLIN_FACT.LSTG_SITE_ID = TEST_SITES.SITE_ID\nINNER JOIN TEST_SELLER_TYPE_DIM\nON TEST_KYLIN_FACT.SLR_SEGMENT_CD = TEST_SELLER_TYPE_DIM.SELLER_TYPE_CD\nWHERE (test_kylin_fact.cal_dt &lt; &apos;2014-07-31 16:00:00&apos;)\n;\n\&quot;&quot;,
+         &quot;interrupt_cmd&quot;:null,
+         &quot;exec_start_time&quot;:0,
+         &quot;exec_end_time&quot;:0,
+         &quot;exec_wait_time&quot;:0,
+         &quot;step_status&quot;:&quot;PENDING&quot;,
+         &quot;cmd_type&quot;:&quot;SHELL_CMD_HADOOP&quot;,
+         &quot;info&quot;:null,
+         &quot;run_async&quot;:false
+      },
+      {  
+         &quot;interruptCmd&quot;:null,
+         &quot;name&quot;:&quot;Extract Fact Table Distinct Columns&quot;,
+         &quot;sequence_id&quot;:1,
+         &quot;exec_cmd&quot;:&quot; -conf C:/kylin/Kylin/server/src/main/resources/hadoop_job_conf_medium.xml -cubename test_kylin_cube_with_slr_empty -input /tmp/kylin-c143e0e4-ac5f-434d-acf3-46b0d15e3dc6/kylin_intermediate_test_kylin_cube_with_slr_desc_19700101000000_20140731160000_c143e0e4_ac5f_434d_acf3_46b0d15e3dc6 -output /tmp/kylin-c143e0e4-ac5f-434d-acf3-46b0d15e3dc6/test_kylin_cube_with_slr_empty/fact_distinct_columns -jobname Kylin_Fact_Distinct_Columns_test_kylin_cube_with_slr_empty_Step_1&quot;,
+         &quot;interrupt_cmd&quot;:null,
+         &quot;exec_start_time&quot;:0,
+         &quot;exec_end_time&quot;:0,
+         &quot;exec_wait_time&quot;:0,
+         &quot;step_status&quot;:&quot;PENDING&quot;,
+         &quot;cmd_type&quot;:&quot;JAVA_CMD_HADOOP_FACTDISTINCT&quot;,
+         &quot;info&quot;:null,
+         &quot;run_async&quot;:true
+      },
+      {  
+         &quot;interruptCmd&quot;:null,
+         &quot;name&quot;:&quot;Load HFile to HBase Table&quot;,
+         &quot;sequence_id&quot;:12,
+         &quot;exec_cmd&quot;:&quot; -input /tmp/kylin-c143e0e4-ac5f-434d-acf3-46b0d15e3dc6/test_kylin_cube_with_slr_empty/hfile/ -htablename KYLIN-CUBE-TEST_KYLIN_CUBE_WITH_SLR_EMPTY-19700101000000_20140731160000_11BB4326-5975-4358-804C-70D53642E03A -cubename test_kylin_cube_with_slr_empty&quot;,
+         &quot;interrupt_cmd&quot;:null,
+         &quot;exec_start_time&quot;:0,
+         &quot;exec_end_time&quot;:0,
+         &quot;exec_wait_time&quot;:0,
+         &quot;step_status&quot;:&quot;PENDING&quot;,
+         &quot;cmd_type&quot;:&quot;JAVA_CMD_HADOOP_NO_MR_BULKLOAD&quot;,
+         &quot;info&quot;:null,
+         &quot;run_async&quot;:false
+      }
+   ],
+   &quot;job_status&quot;:&quot;PENDING&quot;,
+   &quot;progress&quot;:0.0
+}
+</code></pre><h2 id="discard-job">Discard Job</h2>
+<p><code>PUT /jobs/{jobId}/cancel</code></p>
+<h4 id="path-variable">Path variable</h4>
+<ul>
+<li>jobId - <code>required</code> <code>string</code> Job id.</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<p>(Same as &quot;Resume job&quot;)</p>
+<h2 id="get-job-status">Get Job Status</h2>
+<p><code>GET /jobs/{jobId}</code></p>
+<h4 id="path-variable">Path variable</h4>
+<ul>
+<li>jobId - <code>required</code> <code>string</code> Job id.</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<p>(Same as &quot;Resume Job&quot;)</p>
+<h2 id="get-job-step-output">Get job step output</h2>
+<p><code>GET /{jobId}/steps/{stepId}/output</code></p>
+<h4 id="path-variable">Path Variable</h4>
+<ul>
+<li>jobId - <code>required</code> <code>string</code> Job id.</li>
+<li>stepId - <code>required</code> <code>string</code> Step id; the step id is composed by jobId with step sequence id; for example, the jobId is &quot;fb479e54-837f-49a2-b457-651fc50be110&quot;, its 3rd step id is &quot;fb479e54-837f-49a2-b457-651fc50be110-3&quot;, </li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<pre><code>{  
+   &quot;cmd_output&quot;:&quot;log string&quot;
+}
+</code></pre><hr>
+<h2 id="get-hive-table">Get Hive Table</h2>
+<p><code>GET /tables/{tableName}</code></p>
+<h4 id="request-parameters">Request Parameters</h4>
+<ul>
+<li>tableName - <code>required</code> <code>string</code> table name to find.</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<pre><code class="lang-sh">{
+    uuid: <span class="hljs-string">&quot;69cc92c0-fc42-4bb9-893f-bd1141c91dbe&quot;</span>,
+    name: <span class="hljs-string">&quot;SAMPLE_07&quot;</span>,
+    columns: [{
+        id: <span class="hljs-string">&quot;1&quot;</span>,
+        name: <span class="hljs-string">&quot;CODE&quot;</span>,
+        datatype: <span class="hljs-string">&quot;string&quot;</span>
+    }, {
+        id: <span class="hljs-string">&quot;2&quot;</span>,
+        name: <span class="hljs-string">&quot;DESCRIPTION&quot;</span>,
+        datatype: <span class="hljs-string">&quot;string&quot;</span>
+    }, {
+        id: <span class="hljs-string">&quot;3&quot;</span>,
+        name: <span class="hljs-string">&quot;TOTAL_EMP&quot;</span>,
+        datatype: <span class="hljs-string">&quot;int&quot;</span>
+    }, {
+        id: <span class="hljs-string">&quot;4&quot;</span>,
+        name: <span class="hljs-string">&quot;SALARY&quot;</span>,
+        datatype: <span class="hljs-string">&quot;int&quot;</span>
+    }],
+    database: <span class="hljs-string">&quot;DEFAULT&quot;</span>,
+    last_modified: 1419330476755
+}
+</code></pre>
+<h2 id="get-hive-table-extend-info">Get Hive Table (Extend Info)</h2>
+<p><code>GET /tables/{tableName}/exd-map</code></p>
+<h4 id="request-parameters">Request Parameters</h4>
+<ul>
+<li>tableName - <code>optional</code> <code>string</code> table name to find.</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<pre><code>{
+    &quot;minFileSize&quot;: &quot;46055&quot;,
+    &quot;totalNumberFiles&quot;: &quot;1&quot;,
+    &quot;location&quot;: &quot;hdfs://sandbox.hortonworks.com:8020/apps/hive/warehouse/sample_07&quot;,
+    &quot;lastAccessTime&quot;: &quot;1418374103365&quot;,
+    &quot;lastUpdateTime&quot;: &quot;1398176493340&quot;,
+    &quot;columns&quot;: &quot;struct columns { string code, string description, i32 total_emp, i32 salary}&quot;,
+    &quot;partitionColumns&quot;: &quot;&quot;,
+    &quot;EXD_STATUS&quot;: &quot;true&quot;,
+    &quot;maxFileSize&quot;: &quot;46055&quot;,
+    &quot;inputformat&quot;: &quot;org.apache.hadoop.mapred.TextInputFormat&quot;,
+    &quot;partitioned&quot;: &quot;false&quot;,
+    &quot;tableName&quot;: &quot;sample_07&quot;,
+    &quot;owner&quot;: &quot;hue&quot;,
+    &quot;totalFileSize&quot;: &quot;46055&quot;,
+    &quot;outputformat&quot;: &quot;org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat&quot;
+}
+</code></pre><h2 id="get-hive-tables">Get Hive Tables</h2>
+<p><code>GET /tables</code></p>
+<h4 id="request-parameters">Request Parameters</h4>
+<ul>
+<li>project- <code>required</code> <code>string</code> will list all tables in the project.</li>
+<li>ext- <code>optional</code> <code>boolean</code>  set true to get extend info of table.</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<pre><code class="lang-sh">[
+ {
+    uuid: <span class="hljs-string">&quot;53856c96-fe4d-459e-a9dc-c339b1bc3310&quot;</span>,
+    name: <span class="hljs-string">&quot;SAMPLE_08&quot;</span>,
+    columns: [{
+        id: <span class="hljs-string">&quot;1&quot;</span>,
+        name: <span class="hljs-string">&quot;CODE&quot;</span>,
+        datatype: <span class="hljs-string">&quot;string&quot;</span>
+    }, {
+        id: <span class="hljs-string">&quot;2&quot;</span>,
+        name: <span class="hljs-string">&quot;DESCRIPTION&quot;</span>,
+        datatype: <span class="hljs-string">&quot;string&quot;</span>
+    }, {
+        id: <span class="hljs-string">&quot;3&quot;</span>,
+        name: <span class="hljs-string">&quot;TOTAL_EMP&quot;</span>,
+        datatype: <span class="hljs-string">&quot;int&quot;</span>
+    }, {
+        id: <span class="hljs-string">&quot;4&quot;</span>,
+        name: <span class="hljs-string">&quot;SALARY&quot;</span>,
+        datatype: <span class="hljs-string">&quot;int&quot;</span>
+    }],
+    database: <span class="hljs-string">&quot;DEFAULT&quot;</span>,
+    cardinality: {},
+    last_modified: 0,
+    exd: {
+        minFileSize: <span class="hljs-string">&quot;46069&quot;</span>,
+        totalNumberFiles: <span class="hljs-string">&quot;1&quot;</span>,
+        location: <span class="hljs-string">&quot;hdfs://sandbox.hortonworks.com:8020/apps/hive/warehouse/sample_08&quot;</span>,
+        lastAccessTime: <span class="hljs-string">&quot;1398176495945&quot;</span>,
+        lastUpdateTime: <span class="hljs-string">&quot;1398176495981&quot;</span>,
+        columns: <span class="hljs-string">&quot;struct columns { string code, string description, i32 total_emp, i32 salary}&quot;</span>,
+        partitionColumns: <span class="hljs-string">&quot;&quot;</span>,
+        EXD_STATUS: <span class="hljs-string">&quot;true&quot;</span>,
+        maxFileSize: <span class="hljs-string">&quot;46069&quot;</span>,
+        inputformat: <span class="hljs-string">&quot;org.apache.hadoop.mapred.TextInputFormat&quot;</span>,
+        partitioned: <span class="hljs-string">&quot;false&quot;</span>,
+        tableName: <span class="hljs-string">&quot;sample_08&quot;</span>,
+        owner: <span class="hljs-string">&quot;hue&quot;</span>,
+        totalFileSize: <span class="hljs-string">&quot;46069&quot;</span>,
+        outputformat: <span class="hljs-string">&quot;org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat&quot;</span>
+    }
+  }
+]
+</code></pre>
+<h2 id="load-hive-tables">Load Hive Tables</h2>
+<p><code>POST /tables/{tables}/{project}</code></p>
+<h4 id="request-parameters">Request Parameters</h4>
+<ul>
+<li>tables - <code>required</code> <code>string</code> table names you want to load from hive, separated with comma.</li>
+<li>project - <code>required</code> <code>String</code>  the project which the tables will be loaded into.</li>
+</ul>
+<h4 id="response-sample">Response Sample</h4>
+<pre><code>{
+    &quot;result.loaded&quot;: [&quot;DEFAULT.SAMPLE_07&quot;],
+    &quot;result.unloaded&quot;: [&quot;sapmle_08&quot;]
+}
+</code></pre><hr>
+<h2 id="wipe-cache">Wipe cache</h2>
+<p><code>PUT /cache/{type}/{name}/{action}</code></p>
+<h4 id="path-variable">Path variable</h4>
+<ul>
+<li>type - <code>required</code> <code>string</code> &apos;METADATA&apos; or &apos;CUBE&apos;</li>
+<li>name - <code>required</code> <code>string</code> Cache key, e.g the cube name.</li>
+<li>action - <code>required</code> <code>string</code> &apos;create&apos;, &apos;update&apos; or &apos;drop&apos;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="howto_use_restapi_in_js.html" class="navigation navigation-prev " aria-label="Previous page: Use RESTful API in Javascript">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="howto_optimize_cubes.html" class="navigation navigation-next " aria-label="Next page: Optimize Cube">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"docs15","title":"Use RESTful API","categories":"howto","permalink":"/docs15/howto/howto_use_restapi.html","since":"v0.7.1","level":"1.5.3","depth":2,"next":{"title":"Optimize Cube","level":"1.5.4","depth":2,"path":"manual/howto/howto_optimize_cubes.md","ref":"manual/howto/howto_optimize_cubes.md","articles":[]},"previous":{"title":"Use RESTful API in Javascript","level":"1.5.2","depth":2,"path":"manual/howto/howto_use_restapi_in_js.md","ref":"manual/howto/howto_use_restapi_in_js.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"manual/howto/howto_use_restapi.md","mtime":"2016-06-23T04:07:33.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-06-23T09:20:13.690Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,723 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>KAP ODBC Driver · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.1.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../howto/howto_build_cube_with_restapi.html" />
+    
+    
+    <link rel="prev" href="powerbi.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../gettingstarted/concepts.html">
+            
+                <a href="../gettingstarted/concepts.html">
+            
+                    
+                    Technical Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../release_notes.html">
+            
+                <a href="../release_notes.html">
+            
+                    
+                    KAP Release Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../gettingstarted/events.html">
+            
+                <a href="../gettingstarted/events.html">
+            
+                    
+                    Events and Conferences
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../gettingstarted/best_practices.html">
+            
+                <a href="../gettingstarted/best_practices.html">
+            
+                    
+                    Community Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../gettingstarted/terminology.html">
+            
+                <a href="../gettingstarted/terminology.html">
+            
+                    
+                    Terminology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../gettingstarted/faq.html">
+            
+                <a href="../gettingstarted/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../install/">
+            
+                <a href="../install/">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../install/hadoop_evn.html">
+            
+                <a href="../install/hadoop_evn.html">
+            
+                    
+                    Hadoop Enviroument
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../install/kylin_cluster.html">
+            
+                <a href="../install/kylin_cluster.html">
+            
+                    
+                    Deploy in cluster mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../install/advance_settings.html">
+            
+                <a href="../install/advance_settings.html">
+            
+                    
+                    Advance Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="kylin_sample.html">
+            
+                <a href="kylin_sample.html">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="kylin_sample.html">
+            
+                <a href="kylin_sample.html">
+            
+                    
+                    Quick Start with Sample Cube
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="create_cube.html">
+            
+                <a href="create_cube.html">
+            
+                    
+                    KAP Cube Creation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="cube_build_job.html">
+            
+                <a href="cube_build_job.html">
+            
+                    
+                    KAP Cube Build and Job Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="acl.html">
+            
+                <a href="acl.html">
+            
+                    
+                    KAP Cube Permission
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="web.html">
+            
+                <a href="web.html">
+            
+                    
+                    KAP Web Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="tableau.html">
+            
+                <a href="tableau.html">
+            
+                    
+                    Tableau 8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="tableau_91.html">
+            
+                <a href="tableau_91.html">
+            
+                    
+                    Tableau 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="powerbi.html">
+            
+                <a href="powerbi.html">
+            
+                    
+                    MS Excel and Power BI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.9" data-path="odbc.html">
+            
+                <a href="odbc.html">
+            
+                    
+                    KAP ODBC Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../howto/howto_build_cube_with_restapi.html">
+            
+                <a href="../howto/howto_build_cube_with_restapi.html">
+            
+                    
+                    How to
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../howto/howto_build_cube_with_restapi.html">
+            
+                <a href="../howto/howto_build_cube_with_restapi.html">
+            
+                    
+                    Build Cube with RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../howto/howto_use_restapi_in_js.html">
+            
+                <a href="../howto/howto_use_restapi_in_js.html">
+            
+                    
+                    Use RESTful API in Javascript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../howto/howto_use_restapi.html">
+            
+                <a href="../howto/howto_use_restapi.html">
+            
+                    
+                    Use RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../howto/howto_optimize_cubes.html">
+            
+                <a href="../howto/howto_optimize_cubes.html">
+            
+                    
+                    Optimize Cube
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../howto/howto_backup_metadata.html">
+            
+                <a href="../howto/howto_backup_metadata.html">
+            
+                    
+                    Backup Metadata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../howto/howto_cleanup_storage.html">
+            
+                <a href="../howto/howto_cleanup_storage.html">
+            
+                    
+                    Cleanup Storage(HDFS&HBase Tables)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../howto/howto_jdbc.html">
+            
+                <a href="../howto/howto_jdbc.html">
+            
+                    
+                    Use KAP Remote JDBC Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../howto/howto_upgrade.html">
+            
+                <a href="../howto/howto_upgrade.html">
+            
+                    
+                    Upgrade from old versions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../howto/howto_ldap_and_sso.html">
+            
+                <a href="../howto/howto_ldap_and_sso.html">
+            
+                    
+                    Enable Security with LDAP and SSO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../howto/howto_update_coprocessor.html">
+            
+                <a href="../howto/howto_update_coprocessor.html">
+            
+                    
+                    How to Update HBase Coprocessor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >KAP ODBC Driver</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p>We provide Kylin ODBC driver to enable data access from ODBC-compatible client applications.</p>
+<p>Both 32-bit version or 64-bit version driver are available.</p>
+<p>Tested Operation System: Windows 7, Windows Server 2008 R2</p>
+<p>Tested Application: Tableau 8.0.4, Tableau 8.1.3 and Tableau 9.1</p>
+</blockquote>
+<h2 id="prerequisites">Prerequisites</h2>
+<ol>
+<li>Microsoft Visual C++ 2012 Redistributable <ul>
+<li>For 32 bit Windows or 32 bit Tableau Desktop: Download: <a href="http://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x86.exe" target="_blank">32bit version</a> </li>
+<li>For 64 bit Windows or 64 bit Tableau Desktop: Download: <a href="http://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x64.exe" target="_blank">64bit version</a></li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>ODBC driver internally gets results from a REST server, make sure you have access to one</li>
+</ol>
+<h2 id="installation">Installation</h2>
+<ol>
+<li>Uninstall existing Kylin ODBC first, if you already installled it before</li>
+<li><p>Download ODBC Driver from <a href="../../download">download</a>.</p>
+<ul>
+<li>For 32 bit Tableau Desktop: Please install KylinODBCDriver (x86).exe</li>
+<li>For 64 bit Tableau Desktop: Please install KylinODBCDriver (x64).exe</li>
+</ul>
+</li>
+<li><p>Both drivers already be installed on Tableau Server, you properly should be able to publish to there without issues</p>
+</li>
+</ol>
+<h2 id="dsn-configuration">DSN configuration</h2>
+<ol>
+<li><p>Open ODBCAD to configure DSN.</p>
+<ul>
+<li>For 32 bit driver, please use the 32bit version in C:\Windows\SysWOW64\odbcad32.exe</li>
+<li>For 64 bit driver, please use the default &quot;Data Sources (ODBC)&quot; in Control Panel/Administrator Tools
+<img src="../../images/Kylin-ODBC-DSN/1.png" alt=""></li>
+</ul>
+</li>
+<li><p>Open &quot;System DSN&quot; tab, and click &quot;Add&quot;, you will see KylinODBCDriver listed as an option, Click &quot;Finish&quot; to continue.
+<img src="../../images/Kylin-ODBC-DSN/2.png" alt=""></p>
+</li>
+<li><p>In the pop up dialog, fill in all the blanks, The server host is where your Kylin Rest Server is started.
+<img src="../../images/Kylin-ODBC-DSN/3.png" alt=""></p>
+</li>
+<li><p>Click &quot;Done&quot;, and you will see your new DSN listed in the &quot;System Data Sources&quot;, you can use this DSN afterwards.
+<img src="../../images/Kylin-ODBC-DSN/4.png" alt=""></p>
+</li>
+</ol>
+<h2 id="bug-report">Bug Report</h2>
+<p>Please open Apache Kylin JIRA to report bug, or send to dev mailing list.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="powerbi.html" class="navigation navigation-prev " aria-label="Previous page: MS Excel and Power BI">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../howto/howto_build_cube_with_restapi.html" class="navigation navigation-next " aria-label="Next page: How to">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"docs15","title":"KAP ODBC Driver","categories":"tutorial","permalink":"/docs15/tutorial/odbc.html","since":"v0.7.1","level":"1.4.9","depth":2,"next":{"title":"How to","level":"1.5","depth":1,"path":"manual/howto/howto_build_cube_with_restapi.md","ref":"manual/howto/howto_build_cube_with_restapi.md","articles":[{"title":"Build Cube with RESTful API","level":"1.5.1","depth":2,"path":"manual/howto/howto_build_cube_with_restapi.md","ref":"manual/howto/howto_build_cube_with_restapi.md","articles":[]},{"title":"Use RESTful API in Javascript","level":"1.5.2","depth":2,"path":"manual/howto/howto_use_restapi_in_js.md","ref":"manual/howto/howto_use_restapi_in_js.md","articles":[]},{"title":"Use RESTful API","level":"1.5.3","depth":2,"path":"manual/howto/howto_use_restapi.md","ref":"manual/howto/howto_use_restapi.md","articles":[]},{"title":"Optimize Cube","level":"1.5.4","depth":2,"path":"manual/howto/howto_optimize_cubes.md","ref":"manual/howto/howto_optimize_cubes.md","articles":[]},{"title":"Backup Metadata","level":"1.5.5","depth":2,"path":"manual/howto/howto_backup_metadata.md","ref":"manual/howto/howto_backup_metadata.md","articles":[]},{"title":"Cleanup Storage(HDFS&HBase Tables)","level":"1.5.6","depth":2,"path":"manual/howto/howto_cleanup_storage.md","ref":"manual/howto/howto_cleanup_storage.md","articles":[]},{"title":"Use KAP Remote JDBC Driver","level":"1.5.7","depth":2,"path":"manual/howto/howto_jdbc.md","ref":"manual/howto/howto_jdbc.md","articles":[]},{"title":"Upgrade from old versions","level":"1.5.8","depth":2,"path":"manual/howto/howto_upgrade.md","ref":"manual/howto/howto_upgrade.md","articles":[]},{"title":"Enable Security with LDAP and SSO","level":"1.5.9","depth":2,"path":"manual/howto/howto_ldap_and_sso.md","ref":"manual/howto/howto_ldap_and_sso.md","articles":[]},{"title":"How to Update HBase Coprocessor","level":"1.5.10","depth":2,"path":"manual/howto/howto_update_coprocessor.md","ref":"manual/howto/howto_update_coprocessor.md","articles":[]}]},"previous":{"title":"MS Excel and Power BI","level":"1.4.8","depth":2,"path":"manual/tutorial/powerbi.md","ref":"manual/tutorial/powerbi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"manual/tutorial/odbc.md","mtime":"2016-06-23T04:07:33.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-06-23T09:20:13.690Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
